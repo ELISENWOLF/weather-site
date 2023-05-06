@@ -1,0 +1,35 @@
+.container-box {
+    background: var(--main-box);
+    padding: 2.5rem;
+    border-radius: 10px;
+    color: var(--text);
+}
+
+.line {
+    width: 86%;
+}
+
+.temp-box {
+    display: flex;
+    color: var(--main-text);
+}
+
+.temp{
+    font-size: 4rem;
+}
+
+.temp-logo {
+    font-size: 4.3rem;
+    margin-left: 1rem;
+}
+
+.date, .location {
+    display: flex;
+    padding: 0rem 0 0.5rem 0;
+    color: var(--sub-text);
+}
+
+.date-logo, .location-logo {
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+}
