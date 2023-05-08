@@ -6,11 +6,14 @@
 
 body{
   background-color: rgb(33, 36, 40);
+  color: white;
 }
 
 :root {
   --text: rgba(156, 152, 152, 0.915);
   --main-text: rgba(255, 255, 255, .9);
   --sub-text: rgba(97, 97, 97, 0.9);
-  --main-box: rgba(31, 31, 31, 0.915);
+  --main-box: rgba(45, 44, 44, 0.915);
+  --sub-box: rgba(31, 31, 31, 0.915);
+  --btn-type: rgba(215, 95, 133, 0.9);
 }

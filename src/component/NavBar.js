@@ -23,7 +23,7 @@ const NavBar = () => {
             />
             <Button variant="outline-secondary">Search</Button>
           </Form>
-          <Button className="mx-2 my-lg-0">Toggle</Button>
+          <Button className="mx-lg-2 my-2">Toggle</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

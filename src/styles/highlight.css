@@ -1,0 +1,60 @@
+.highlights {
+    background-color: var(--main-box);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+h4 {
+    color: var(--main-text);
+    font-size: 22px;
+}
+
+.air-details {
+    background-color: var(--sub-box);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.wind-icon {
+    font-size: 4rem;
+}
+
+.top-left-head{
+    display: flex;
+    justify-content: space-between
+}
+
+.air-measure{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0 2rem 0;
+}
+
+.air-value {
+    text-align: center;
+}
+
+.air-value span {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 300;
+}
+.air-value h3 {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.top-left-head h6 {
+    color: var(--text);
+}
+
+.top-left-head span {
+    padding: 5px;
+    width: 20%;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 20px;
+    color: black;
+    background-color: var(--btn-type);
+    font-size: 14px;
+}
