@@ -1,30 +1,24 @@
-import {  Row, Col } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 
 import '../styles/maincontainer.css'
 import TemperatureBox from './layout/TemperatureBox'
 import Highlights from './layout/Highlights'
 import Forecast from './layout/Forecast'
-import ClimateInHours from './layout/ClimateInHours'
+import TodaysClimate from './layout/TodaysClimate'
 
 const MainContainer = () => {
   return (
     <div className='box'>
-        <Row>
-            <Col xl={3}>
+        <Col xl={3} md={3}>
                 <TemperatureBox />
-            </Col>
-            <Col xl={9}>
-                <Highlights />
-            </Col>
-        </Row>
-        <Row>
-        <Col xl={3}>
+                &nbsp;
                 <Forecast />
-            </Col>
-            <Col xl={9}>
-                <ClimateInHours />
-            </Col>
-        </Row>
+        </Col>
+        <Col xl={9} md={8}>
+                <Highlights />
+                &nbsp;
+                <TodaysClimate />
+        </Col>
     </div>
   )
 }

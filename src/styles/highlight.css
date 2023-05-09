@@ -4,6 +4,11 @@
     padding: 2rem;
 }
 
+.top-highlights{
+    display: flex;
+    justify-content: space-between;
+}
+
 h4 {
     color: var(--main-text);
     font-size: 22px;
@@ -13,6 +18,7 @@ h4 {
     background-color: var(--sub-box);
     border-radius: 10px;
     padding: 1rem;
+    width: 49%;
 }
 
 .wind-icon {
@@ -57,4 +63,99 @@ h4 {
     color: black;
     background-color: var(--btn-type);
     font-size: 14px;
+}
+
+.sun-rise_set {
+    background-color: var(--sub-box);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 49%;
+}
+
+.top-right-head{
+    color: var(--text);
+}
+
+.rise-set-time{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0 2rem 0;
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+}
+
+.sunrise,
+.sunset {
+    display: flex;
+}
+
+.rise-set-logo {
+    font-size: 4.2rem;
+}
+
+.sunrise-time,
+.sunset-time {
+    margin-left: 1rem;
+}
+
+.sunrise-time span,
+.sunset-time span {
+    font-size: 12px;
+    color: var(--text);
+}
+.sunrise-time h3,
+.sunset-time h3 {
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+.bottom-higlights {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.humidity,
+.pressure,
+.visibility,
+.feels-like {
+    background-color: var(--sub-box);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 23.5%;
+}
+
+.hum-value,
+.pressure-value,
+.visi-value,
+.feels-value {
+    display: flex;
+    justify-content: space-between;
+    align-items: star;
+}
+
+.humidity h5,
+.pressure h5,
+.visibility h5,
+.feels-like h5 {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.hum-value .logo,
+.pressure-value .logo,
+.visi-value .logo,
+.feels-like .logo {
+    font-size: 3rem;
+}
+.hum-value span,
+.pressure-value span,
+.visi-value span,
+.feels-like span {
+    font-size: 2rem;
+    font-weight: 300;
 }
