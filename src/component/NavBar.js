@@ -1,35 +1,51 @@
-import { Navbar, Container, Nav, Form, Button } from 'react-bootstrap'
+import { useState } from 'react'
+import { AsyncPaginate } from 'react-select-async-paginate'
 
-const NavBar = () => {
+import { URL, API_KEY } from '../constants/api'
+import '../styles/navbar.css'
+
+const NavBar = ({ onSearchChange }) => {
+
+  const [search, setSearch] = useState(null)
+
+  const loadOptions = async(searchCity) => {
+    return fetch(`${URL}/forecast.json?key=${API_KEY}&q=${searchCity}&days=7&aqi=yes&alerts=no`)
+    .then(res => res.json())
+    .then(res => {
+      return {
+              
+              options: [res.location]?.map((city) => {
+                return {
+                  value: `${city.lat} ${city.lon}`,
+                  label: `${city.name}, ${city.country}`,
+                }
+              })
+            }
+    })
+    .catch(err => console.error(err))
+  }
+
+  loadOptions('New Delhi')
+
+  const handleOnChange = (searchData) => {
+    
+    setSearch(searchData)
+    onSearchChange(searchData)
+  }
+
   return (
-    <Navbar bg="dark" variant='dark' expand="lg">
-      <Container fluid>
-        <Navbar.Brand href="#">EW</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Nav.Link href="#action1">Home</Nav.Link>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-secondary">Search</Button>
-          </Form>
-          <Button className="mx-lg-2 my-2">Toggle</Button>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <div className='navbar'>
+      <span>logo</span>
+        <AsyncPaginate
+          placeholder='Search for city'
+          debounceTimeOut={600}
+          value={search}
+          loadOptions={loadOptions}
+          onChange={handleOnChange}
+          className='input-box'
+        />
+    </div>
   )
 }
 
 export default NavBar
-
-// npm i react-bootstrap

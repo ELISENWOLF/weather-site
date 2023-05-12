@@ -8,7 +8,26 @@ import { RiTempColdLine } from 'react-icons/ri'
 
 import '../../styles/highlight.css'
 
-const Highlights = () => {
+const Highlights = ({data, air}) => {
+
+  console.log(data);
+
+  const visibilityValue = data.visibility/1000
+
+  //SunSet & SunRise//
+
+  const timeZone = data.timezone
+  const sun_Rise = data.sys.sunrise
+  const sun_Set = data.sys.sunset
+
+  const riseDetail = new Date((timeZone+sun_Rise)*1000).toUTCString()
+  const [, , , , riseTime] = riseDetail.split(" ")
+  const [riseHour, riseMinute, ] = riseTime.split(":")
+  
+  const setDetail = new Date((timeZone+sun_Set)*1000).toUTCString()
+  const [ , , , , setTime] = setDetail.split(" ")
+  const [setHour, setMinute, ] = setTime.split(":")
+
   return (
     <Container className='highlights'>
       <h4>Today's Highlights</h4>
@@ -21,10 +40,10 @@ const Highlights = () => {
             </div>
             <Col className='air-measure'>
               <Col><TbWind className='wind-icon'/></Col>
-              <Col className='air-value'><span>PM25</span><h3>177</h3></Col>
-              <Col className='air-value'><span>SO<sub>2</sub></span><h3>29.8</h3></Col>
-              <Col className='air-value'><span>NO<sub>2</sub></span><h3>43.2</h3></Col>
-              <Col className='air-value'><span>O<sub>3</sub></span><h3>0.150</h3></Col>
+              <Col className='air-value'><span>PM<sub>2.5</sub></span><h3>{Math.round(air.list[0].components.pm2_5)}</h3></Col>
+              <Col className='air-value'><span>SO<sub>2</sub></span><h3>{Math.round(air.list[0].components.so2)}</h3></Col>
+              <Col className='air-value'><span>NO<sub>2</sub></span><h3>{Math.round(air.list[0].components.no2)}</h3></Col>
+              <Col className='air-value'><span>O<sub>3</sub></span><h3>{Math.round(air.list[0].components.o3)}</h3></Col>
             </Col>
           </Col>
           <Col xl={12} className='sun-rise_set'>
@@ -36,13 +55,13 @@ const Highlights = () => {
                 <Col className='sunrise'>
                   <BiSun className='rise-set-logo'/>
                   <div className='sunrise-time'>
-                  <span>Sunrise</span><h3>6:15 AM</h3>
+                  <span>Sunrise</span><h3>{riseHour}:{riseMinute} AM</h3>
                   </div>
                 </Col>
                 <Col className='sunrise'>
                   <BiMoon className='rise-set-logo'/>
                   <div className='sunrise-time'>
-                  <span>Sunset</span><h3>6:21 PM</h3>
+                  <span>Sunset</span><h3>{setHour}:{setMinute} PM</h3>
                   </div>
                 </Col>
               </Col>
@@ -54,28 +73,28 @@ const Highlights = () => {
             <h5>Humidity</h5>
             <div className='hum-value'>
               <WiHumidity className='logo'/>
-              <span>73%</span>
+              <span>{data.main.humidity}%</span>
             </div>
           </Col>
           <Col xl={2} className='pressure'>
             <h5>Pressure</h5>
             <div className='pressure-value'>
               <TiWaves className='logo'/>
-              <span>1019hPa</span>
+              <span>{data.main.pressure}hPa</span>
             </div>
           </Col>
           <Col xl={2} className='visibility'>
             <h5>Visibility</h5>
             <div className='visi-value'>
               <MdOutlineVisibility className='logo'/>
-              <span>2.5km</span>
+              <span>{Math.round(visibilityValue)}km</span>
             </div>
           </Col>
           <Col xl={2} className='feels-like'>
             <h5>Feels Like</h5>
             <div className='feels-value'>
               <RiTempColdLine className='logo'/>
-              <span>20<sup>o</sup>c</span>
+              <span>{Math.round(data.main.feels_like)}<sup>o</sup>c</span>
             </div>
           </Col>
         </Col>

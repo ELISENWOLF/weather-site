@@ -6,16 +6,16 @@
 }
 
 
-.temp-box {
+.temperature-box {
     display: flex;
     color: var(--main-text);
 }
 
-.temp{
+.temperature{
     font-size: 5rem;
 }
 
-.temp-logo {
+.temperature-logo {
     font-size: 5.4rem;
     margin-left: 1rem;
 }
@@ -43,14 +43,14 @@
     .top h6 {
         font-size: 14px;
     }
-    .temp {
+    .temperature {
         font-size: 3rem;
     }
-    .temp-box{
+    .temperature-box{
         display: flex;
         justify-content: space-between;
     }
-    .temp-logo{
+    .temperature-logo{
         font-size: 3.1rem;
     }
 
@@ -71,14 +71,14 @@
     .top h6 {
         font-size: 10px;
     }
-    .temp {
+    .temperature {
         font-size: 1.5rem;
     }
-    .temp-box{
+    .temperature-box{
         display: flex;
         justify-content: space-between;
     }
-    .temp-logo{
+    .temperature-logo{
         font-size: 1.6rem;
     }
 
@@ -100,15 +100,15 @@
     .top h6 {
         font-size: 14px;
     }
-    .temp-box{
+    .temperature-box{
         display: flex;
         justify-content: space-between;
     }
-    .temp {
+    .temperature {
         font-size: 2.8rem;
     }
 
-    .temp-logo{
+    .temperature-logo{
         font-size: 3rem;
     }
 
@@ -130,15 +130,15 @@
     .top h6 {
         font-size: 12px;
     }
-    .temp-box{
+    .temperature-box{
         display: flex;
         justify-content: space-between;
     }
-    .temp {
+    .temperature {
         font-size: 2rem;
     }
 
-    .temp-logo{
+    .temperature-logo{
         font-size: 2.5rem;
     }
 
