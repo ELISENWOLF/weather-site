@@ -1,6 +1,6 @@
 import { Col } from 'react-bootstrap'
 
-import { HOURLY_API_URL, WEATHER_API_URL, WEATHER_API_KEY } from '../constants/api'
+import { HOURLY_API_URL, WEATHER_API_URL } from '../constants/api'
 
 import CurrentWeather from './layout/CurrentWeather'
 import Highlights from './layout/Highlights'
@@ -19,10 +19,10 @@ const MainContainer = () => {
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
 
-    const currentweatherfetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
-    const pollutionfetch = fetch(`${WEATHER_API_URL}/air_pollution?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
-    const forecastfetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
-    const hourlyforecastfetch = fetch(`${HOURLY_API_URL}/forecast/hourly?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
+    const currentweatherfetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`)
+    const pollutionfetch = fetch(`${WEATHER_API_URL}/air_pollution?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`)
+    const forecastfetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`)
+    const hourlyforecastfetch = fetch(`${HOURLY_API_URL}/forecast/hourly?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`)
 
     Promise.all([currentweatherfetch, forecastfetch, pollutionfetch, hourlyforecastfetch])
       .then(async (res) => {

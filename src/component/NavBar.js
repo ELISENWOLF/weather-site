@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { AsyncPaginate } from 'react-select-async-paginate'
 
-import { URL, API_KEY } from '../constants/api'
+import { URL } from '../constants/api'
 import '../styles/navbar.css'
 
 const NavBar = ({ onSearchChange }) => {
@@ -9,7 +9,7 @@ const NavBar = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null)
 
   const loadOptions = async(searchCity) => {
-    return fetch(`${URL}/forecast.json?key=${API_KEY}&q=${searchCity}&days=7&aqi=yes&alerts=no`)
+    return fetch(`${URL}/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${searchCity}&days=7&aqi=yes&alerts=no`)
     .then(res => res.json())
     .then(res => {
       return {
