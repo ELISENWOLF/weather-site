@@ -1,6 +1,6 @@
 import { Col } from 'react-bootstrap'
 
-import { WEATHER_API_URL, WEATHER_API_KEY } from '../constants/api'
+import { HOURLY_API_URL, WEATHER_API_URL, WEATHER_API_KEY } from '../constants/api'
 
 import CurrentWeather from './layout/CurrentWeather'
 import Highlights from './layout/Highlights'
@@ -14,6 +14,7 @@ const MainContainer = () => {
   const [currentweather, setCurrentWeather] = useState(null)
   const [forecast, setForecast] = useState(null)
   const [pollution, setPollution] = useState(null)
+  const [hourlyForecast, setHourlyForecast] = useState(null)
 
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
@@ -21,16 +22,19 @@ const MainContainer = () => {
     const currentweatherfetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
     const pollutionfetch = fetch(`${WEATHER_API_URL}/air_pollution?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
     const forecastfetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
+    const hourlyforecastfetch = fetch(`${HOURLY_API_URL}/forecast/hourly?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`)
 
-    Promise.all([currentweatherfetch, forecastfetch, pollutionfetch])
+    Promise.all([currentweatherfetch, forecastfetch, pollutionfetch, hourlyforecastfetch])
       .then(async (res) => {
         const weatherResponse = await res[0].json()
         const forecastResponse = await res[1].json()
         const pollutionResponse = await res[2].json()
+        const hourlyForecastResponse = await res[3].json()
 
         setCurrentWeather({ city: searchData.label, ...weatherResponse })
         setForecast({ city: searchData.label, ...forecastResponse })
         setPollution({ city: searchData.label, ...pollutionResponse })
+        setHourlyForecast({ city: searchData.label, ...hourlyForecastResponse })
       })
       .catch((err) => console.error(err))
   }
@@ -38,6 +42,7 @@ const MainContainer = () => {
   // console.log(currentweather);
   // console.log(forecast);
   // console.log(pollution);
+  console.log(hourlyForecast);
 
   return (
     <div className='box'>
@@ -51,7 +56,7 @@ const MainContainer = () => {
         <Col xl={9} md={8}>
           {currentweather && <Highlights data={currentweather} air={pollution}/>}
           &nbsp;
-          <TodaysClimate />
+          {hourlyForecast && <TodaysClimate data={hourlyForecast}/>}
         </Col>
       </div>
     </div>
