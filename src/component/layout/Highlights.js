@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { TbWind } from 'react-icons/tb'
 import { BiSun, BiMoon } from 'react-icons/bi'
@@ -7,20 +8,19 @@ import { MdOutlineVisibility } from 'react-icons/md'
 import { RiTempColdLine } from 'react-icons/ri'
 
 import '../../styles/highlight.css'
-import { useEffect, useState } from 'react'
 
-const Highlights = ({data, air}) => {
-
+const Highlights = ({data , rise_set}) => {
   const [airCondition, setAirCondition] = useState("")
-  const [hour, setHour] = useState("")
+  const [hour, setHour] = useState('')
 
-  const visibilityValue = data.visibility/1000
+  console.log(data);
+
 
   //SunSet & SunRise//
 
-  const timeZone = data.timezone
-  const sun_Rise = data.sys.sunrise
-  const sun_Set = data.sys.sunset
+  const timeZone = rise_set.timezone
+  const sun_Rise = rise_set.sys.sunrise
+  const sun_Set = rise_set.sys.sunset
 
   const riseDetail = new Date((timeZone+sun_Rise)*1000).toUTCString()
   const [, , , , riseTime] = riseDetail.split(" ")
@@ -28,44 +28,44 @@ const Highlights = ({data, air}) => {
   
   const set_Detail = new Date((timeZone+sun_Set)*1000).toUTCString()
   const [ , , , , set_Time] = set_Detail.split(" ")
-  const [set_Hour, set_Minute, ] = set_Time.split(":")
+  const [set_Hour, , ] = set_Time.split(":")
 
   useEffect(() => {
-    if(set_Hour == '00'){
+    if(set_Hour === '00'){
       setHour('12')
-    }else if(set_Hour == '13'){
+    }else if(set_Hour === '13'){
       setHour('1')
-    }else if(set_Hour == '14'){
+    }else if(set_Hour === '14'){
       setHour('2')
-    }else if(set_Hour == '15'){
+    }else if(set_Hour === '15'){
       setHour('3')
-    }else if(set_Hour == '16'){
+    }else if(set_Hour === '16'){
       setHour('4')
-    }else if(set_Hour == '17'){
+    }else if(set_Hour === '17'){
       setHour('5')
-    }else if(set_Hour == '18'){
+    }else if(set_Hour === '18'){
       setHour('6')
-    }else if(set_Hour == '19'){
+    }else if(set_Hour === '19'){
       setHour('7')
-    }else if(set_Hour == '20'){
+    }else if(set_Hour === '20'){
       setHour('8')
-    }else if(set_Hour == '21'){
+    }else if(set_Hour === '21'){
       setHour('9')
-    }else if(set_Hour == '22'){
+    }else if(set_Hour === '22'){
       setHour('10')
-    }else if(set_Hour == '23'){
+    }else if(set_Hour === '23'){
       setHour('11')
     }
-  })
+  }, [set_Hour])
 
   //air_condition//
 
-  const SO2 = Math.round(air.list[0].components.so2)
-  const NO2 = Math.round(air.list[0].components.no2)
-  const PM10 = Math.round(air.list[0].components.pm10)
-  const PM2_5 = Math.round(air.list[0].components.pm2_5)
-  const O3 = Math.round(air.list[0].components.o3)
-  const CO = Math.round(air.list[0].components.co)
+  const SO2 = Math.round(data.current.air_quality.so2)
+  const NO2 = Math.round(data.current.air_quality.no2)
+  const PM10 = Math.round(data.current.air_quality.pm10)
+  const PM2_5 = Math.round(data.current.air_quality.pm2_5)
+  const O3 = Math.round(data.current.air_quality.o3)
+  const CO = Math.round(data.current.air_quality.co)
 
    useEffect(() => {
     if(SO2 <= 20 && NO2 <= 40 && PM10 <= 20 && PM2_5 <= 10 && O3 <= 60 && CO <= 4400){
@@ -117,7 +117,7 @@ const Highlights = ({data, air}) => {
                 <Col className='sunrise'>
                   <BiMoon className='rise-set-logo'/>
                   <div className='sunrise-time'>
-                  <span>Sunset</span><h3>{hour}:{set_Minute} PM</h3>
+                  <span>Sunset</span><h3>{hour}:{set_Hour} PM</h3>
                   </div>
                 </Col>
               </Col>
@@ -129,28 +129,28 @@ const Highlights = ({data, air}) => {
             <h5>Humidity</h5>
             <div className='hum-value'>
               <WiHumidity className='logo'/>
-              <span>{data.main.humidity}%</span>
+              <span>{data.current.humidity}%</span>
             </div>
           </Col>
           <Col xl={2} className='pressure'>
             <h5>Pressure</h5>
             <div className='pressure-value'>
               <TiWaves className='logo'/>
-              <span>{data.main.pressure}hPa</span>
+              <span>1000hPa</span>
             </div>
           </Col>
           <Col xl={2} className='visibility'>
             <h5>Visibility</h5>
             <div className='visi-value'>
               <MdOutlineVisibility className='logo'/>
-              <span>{Math.round(visibilityValue)}km</span>
+              <span>5km</span>
             </div>
           </Col>
           <Col xl={2} className='feels-like'>
             <h5>Feels Like</h5>
             <div className='feels-value'>
               <RiTempColdLine className='logo'/>
-              <span>{Math.round(data.main.feels_like)}<sup>o</sup>c</span>
+              <span>21<sup>o</sup>c</span>
             </div>
           </Col>
         </Col>

@@ -2,13 +2,10 @@ import { Col, Container, Row } from "react-bootstrap"
 
 import sunny from '../../assets/images/01d.png'
 import '../../styles/todayclimate.css'
-import { useEffect, useState } from "react"
 
 const TodaysClimate = ({ data }) => {
 
   // const [hour, setHour] = useState('')
-
-  console.log(data);
 
   // useEffect(() => {
   //   if(set_Hour == '00'){
@@ -58,41 +55,6 @@ const TodaysClimate = ({ data }) => {
           <span className="wind-time">9 PM</span>
           <img src={sunny} alt='sunny' className="today-temperature"/>
           <span className="windspeed">9 km/h</span>
-        </Col>
-        <Col xl={1} className="all-wind">
-          <span className="wind-time">12 AM</span>
-          <img src={sunny} alt='sunny' className="today-temperature"/>
-          <span className="windspeed">8 km/h</span>
-        </Col>
-        <Col xl={1} className="all-wind">
-          <span className="wind-time">3 AM</span>
-          <img src={sunny} alt='sunny' className="today-temperature"/>
-          <span className="windspeed">8 km/h</span>
-        </Col>
-        <Col xl={1} className="all-wind">
-          <span className="wind-time">6 AM</span>
-          <img src={sunny} alt='sunny' className="today-temperature"/>
-          <span className="windspeed">10 km/h</span>
-        </Col>
-        <Col xl={1} className="all-wind">
-          <span className="wind-time">9 AM</span>
-          <img src={sunny} alt='sunny' className="today-temperature"/>
-          <span className="windspeed">13 km/h</span>
-        </Col>
-        <Col xl={1} className="all-wind">
-          <span className="wind-time">12 PM</span>
-          <img src={sunny} alt='sunny' className="today-temperature"/>
-          <span className="windspeed">14 km/h</span>
-        </Col>
-        <Col xl={1} className="all-wind">
-          <span className="wind-time">3 PM</span>
-          <img src={sunny} alt='sunny' className="today-temperature"/>
-          <span className="windspeed">15 km/h</span>
-        </Col>
-        <Col xl={1} className="all-wind">
-          <span className="wind-time">6 PM</span>
-          <img src={sunny} alt='sunny' className="today-temperature"/>
-          <span className="windspeed">12km/h</span>
         </Col>
       </Row>
     </Container>

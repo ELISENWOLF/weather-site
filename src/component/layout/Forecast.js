@@ -2,7 +2,7 @@ import { Col, Row } from 'react-bootstrap'
 
 import '../../styles/forecast.css'
 
-const WEEK = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday' ]
+const WEEK = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun' ]
 
 const Forecast = ({ data }) => {
 
@@ -15,18 +15,18 @@ const Forecast = ({ data }) => {
       <h6>5 Days Forecast</h6>
       <Col xl={11} className='forecast-container'>
         {
-          data.list.splice(0, 5).map((item, index) => (
+          data.forecast.forecastday.map((item, index) => (
             <Row key={index}>
               <div className='forecast-days'>
                 <Col xl={4} className='image-temp'>
-                  <img src={`weather_icons/${item.weather[0].icon}.png`} alt='weather-icon' />
-                  <h5>{Math.round(item.main.temp)}<sup>o</sup></h5>
+                  <img src={item.day.condition.icon} alt='weather-icon' />
+                  <h5>{Math.round(item.day.avgtemp_c)}<sup>o</sup></h5>
                 </Col>
                 <Col xl={4}>
                 <span>{forecastDay[index]}</span>
                 </Col>
                 <Col xl={4}>
-                <span>{item.weather[0].main}</span>
+                <span>{item.day.condition.text}</span>
                 </Col>
               </div>
             </Row>
