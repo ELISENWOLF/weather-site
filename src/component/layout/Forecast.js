@@ -8,6 +8,7 @@ const Forecast = ({ data }) => {
 
   const day = new Date().getDay()
   const forecastDay = WEEK.slice(day, WEEK.length).concat(WEEK.slice(0, day))
+
   
   return (
     <>

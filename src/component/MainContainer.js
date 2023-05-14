@@ -1,6 +1,6 @@
 import { Col } from 'react-bootstrap'
 
-import { HOURLY_API_URL, WEATHER_API_URL } from '../constants/api'
+import { WEATHER_API_URL, RAPID_FORECAST_URL } from '../constants/api'
 
 import CurrentWeather from './layout/CurrentWeather'
 import Highlights from './layout/Highlights'
@@ -19,12 +19,20 @@ const MainContainer = () => {
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
 
-    const currentweatherfetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`)
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': '115d847f08mshc09b91fd0075cbfp134e3ejsn2ca0bf84f18f',
+        'X-RapidAPI-Host': 'forecast9.p.rapidapi.com'
+      }
+    }
+
+	  const hourlyForecastfetch = fetch(`${RAPID_FORECAST_URL}/forecast/${lat}/${lon}/hourly/`, options);
+	  const currentweatherfetch = fetch(`${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`)
     const pollutionfetch = fetch(`${WEATHER_API_URL}/air_pollution?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`)
     const forecastfetch = fetch(`${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`)
-    const hourlyforecastfetch = fetch(`${HOURLY_API_URL}/forecast/hourly?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`)
 
-    Promise.all([currentweatherfetch, forecastfetch, pollutionfetch, hourlyforecastfetch])
+    Promise.all([currentweatherfetch, forecastfetch, pollutionfetch, hourlyForecastfetch])
       .then(async (res) => {
         const weatherResponse = await res[0].json()
         const forecastResponse = await res[1].json()
@@ -56,7 +64,7 @@ const MainContainer = () => {
         <Col xl={9} md={8}>
           {currentweather && <Highlights data={currentweather} air={pollution}/>}
           &nbsp;
-          {hourlyForecast && <TodaysClimate data={hourlyForecast}/>}
+          {forecast && <TodaysClimate data={forecast}/>}
         </Col>
       </div>
     </div>

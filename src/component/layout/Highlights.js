@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react'
 const Highlights = ({data, air}) => {
 
   const [airCondition, setAirCondition] = useState("")
+  const [hour, setHour] = useState("")
 
   const visibilityValue = data.visibility/1000
 
@@ -25,9 +26,37 @@ const Highlights = ({data, air}) => {
   const [, , , , riseTime] = riseDetail.split(" ")
   const [riseHour, riseMinute, ] = riseTime.split(":")
   
-  const setDetail = new Date((timeZone+sun_Set)*1000).toUTCString()
-  const [ , , , , setTime] = setDetail.split(" ")
-  const [setHour, setMinute, ] = setTime.split(":")
+  const set_Detail = new Date((timeZone+sun_Set)*1000).toUTCString()
+  const [ , , , , set_Time] = set_Detail.split(" ")
+  const [set_Hour, set_Minute, ] = set_Time.split(":")
+
+  useEffect(() => {
+    if(set_Hour == '00'){
+      setHour('12')
+    }else if(set_Hour == '13'){
+      setHour('1')
+    }else if(set_Hour == '14'){
+      setHour('2')
+    }else if(set_Hour == '15'){
+      setHour('3')
+    }else if(set_Hour == '16'){
+      setHour('4')
+    }else if(set_Hour == '17'){
+      setHour('5')
+    }else if(set_Hour == '18'){
+      setHour('6')
+    }else if(set_Hour == '19'){
+      setHour('7')
+    }else if(set_Hour == '20'){
+      setHour('8')
+    }else if(set_Hour == '21'){
+      setHour('9')
+    }else if(set_Hour == '22'){
+      setHour('10')
+    }else if(set_Hour == '23'){
+      setHour('11')
+    }
+  })
 
   //air_condition//
 
@@ -88,7 +117,7 @@ const Highlights = ({data, air}) => {
                 <Col className='sunrise'>
                   <BiMoon className='rise-set-logo'/>
                   <div className='sunrise-time'>
-                  <span>Sunset</span><h3>{setHour}:{setMinute} PM</h3>
+                  <span>Sunset</span><h3>{hour}:{set_Minute} PM</h3>
                   </div>
                 </Col>
               </Col>
