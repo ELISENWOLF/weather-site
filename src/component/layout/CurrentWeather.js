@@ -21,9 +21,9 @@ const CurrentWeather = ({ data, countryCode }) => {
         <h6>Now</h6>
         <Col className='temperature-box'>
           <h2 className='temperature'>{data.current.temp_c}<sup>o</sup>C</h2>
-          <img src={`//cdn.weatherapi.com/weather/64x64/night/176.png`} alt='weather' className='temperature-logo'/>
+          <img src={data.current.condition.icon} alt='weather' className='temperature-logo'/>
         </Col>
-        <h6 className='weather-description'>{data.current.condition.text}</h6>
+        <h6 className='weather-description'>{data.current.condition.text.replace("possible", '')}</h6>
         <hr className='line' />
       </Col>
       <Col className='bottom'>

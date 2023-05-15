@@ -18,7 +18,7 @@ const MainContainer = () => {
     const [lat, lon] = searchData.value.split(" ");
     const [searchCity, ] = searchData.label.split(',')
 
-	  const weatherfetch = fetch(`${WEATHER_API_URL}/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${searchCity}&days=5&aqi=yes&alerts=no`);
+	  const weatherfetch = fetch(`${WEATHER_API_URL}/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${searchCity}&days=6&aqi=yes&alerts=no`);
 	  const currentweatherfetch = fetch(`${OPEN_WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${process.env.REACT_APP_OPEN_WEATHER_API_KEY}`)
 
     Promise.all([weatherfetch, currentweatherfetch])

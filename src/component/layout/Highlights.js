@@ -7,14 +7,13 @@ import { TiWaves } from 'react-icons/ti'
 import { MdOutlineVisibility } from 'react-icons/md'
 import { RiTempColdLine } from 'react-icons/ri'
 
+import direction from '../../assets/images/weather_icons/direction.png'
 import '../../styles/highlight.css'
 
 const Highlights = ({data , rise_set}) => {
   const [airCondition, setAirCondition] = useState("")
+  const [airBgColor, setAirBgColor] = useState('')
   const [hour, setHour] = useState('')
-
-  console.log(data);
-
 
   //SunSet & SunRise//
 
@@ -70,17 +69,25 @@ const Highlights = ({data , rise_set}) => {
    useEffect(() => {
     if(SO2 <= 20 && NO2 <= 40 && PM10 <= 20 && PM2_5 <= 10 && O3 <= 60 && CO <= 4400){
       setAirCondition('Good')
+      setAirBgColor('rgb(99, 192, 63)')
     }else if(SO2 <= 80 && NO2 <= 70 && PM10 <= 50 && PM2_5 <= 25 && O3 <= 100 && CO <= 9400){
-      setAirCondition('fair')
+      setAirCondition('Fair')
+      setAirBgColor('rgb(171, 192, 63)')
     }else if(SO2 <= 250 && NO2 <= 150 && PM10 <= 100 && PM2_5 <= 50 && O3 <= 140 && CO <= 12400){
       setAirCondition('Moderate')
+      setAirBgColor('rgb(192, 123, 63)')
     }else if(SO2 <= 350 && NO2 <= 200 && PM10 <= 200 && PM2_5 <= 75 && O3 <= 180 && CO <= 15400){
       setAirCondition('Poor')
+      setAirBgColor('rgb(192, 97, 63)')
     }else if(SO2 > 350 && NO2 > 200 && PM10 > 200 && PM2_5 > 75 && O3 > 180 && CO > 15400){
       setAirCondition('Very Poor')
+      setAirBgColor('rgb(192, 63, 63)')
     } 
    }, [SO2, NO2, PM10, PM2_5, O3, CO])
 
+   const style = {
+    transform: `rotateZ(${data.current.wind_degree}deg)`
+   }
 
   return (
     <Container className='highlights'>
@@ -90,7 +97,7 @@ const Highlights = ({data , rise_set}) => {
           <Col xl={5} sm={12} xs={8}  className='air-details'>
             <div className='top-left-head'>
               <h6>Air Quantity Index</h6>
-              <span>{airCondition}</span>
+              <span style={{background: `${airBgColor}`}}>{airCondition}</span>
             </div>
             <Col className='air-measure'>
               <Col><TbWind className='wind-icon'/></Col>
@@ -136,7 +143,7 @@ const Highlights = ({data , rise_set}) => {
             <h5>Pressure</h5>
             <div className='pressure-value'>
               <TiWaves className='logo'/>
-              <span>1000hPa</span>
+              <span>{data.current.pressure_mb}hPa</span>
             </div>
           </Col>
           <Col xl={2} className='visibility'>
@@ -151,6 +158,17 @@ const Highlights = ({data , rise_set}) => {
             <div className='feels-value'>
               <RiTempColdLine className='logo'/>
               <span>21<sup>o</sup>c</span>
+            </div>
+          </Col>
+          <Col xl={2} className='wind'>
+            <h5>Wind</h5>
+            <div className='wind-value'>
+              <img 
+                src={direction}
+                style={style}
+                alt='direction-logo'
+                className='logo'/>
+              <span>{data.current.wind_kph}km/h</span>
             </div>
           </Col>
         </Col>
