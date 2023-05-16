@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-body{
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
   background-color: rgb(33, 36, 40);
   color: white;
 }
 
 :root {
   --text: rgba(156, 152, 152, 0.915);
-  --main-text: rgba(255, 255, 255, .9);
+  --main-text: rgba(255, 255, 255, 0.9);
   --sub-text: rgba(97, 97, 97, 0.9);
   --sub-box: rgba(45, 44, 44, 0.915);
   --main-box: rgba(39, 39, 39, 0.915);
   --scrollbar-bg: rgba(109, 109, 109, 0.9);
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }

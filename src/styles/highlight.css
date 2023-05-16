@@ -1,122 +1,134 @@
 .highlights {
-    background-color: var(--main-box);
-    border-radius: 10px;
-    padding: 2rem;
+  background-color: var(--main-box);
+  border-radius: 10px;
+  padding: 1rem;
 }
 
-.top-highlights{
-    display: flex;
-    justify-content: space-between;
-}
+/* Common */
 
 h4 {
-    color: var(--main-text);
-    font-size: 22px;
+  color: var(--main-text);
+  font-size: 22px;
 }
+
+/* Top Box */
+
+.top-highlights {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Top Box Head */
 
 .air-details {
-    background-color: var(--sub-box);
-    border-radius: 10px;
-    padding: 1rem;
-    width: 49%;
-}
-
-.wind-icon {
-    font-size: 4rem;
-}
-
-.top-left-head{
-    display: flex;
-    justify-content: space-between
-}
-
-.air-measure{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2rem 0 2rem 0;
-}
-
-.air-value {
-    text-align: center;
-}
-
-.air-value span {
-    color: var(--text);
-    font-size: 12px;
-    font-weight: 300;
-}
-.air-value h3 {
-    font-size: 30px;
-    font-weight: 200;
+  background-color: var(--sub-box);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 49%;
 }
 
 .top-left-head h6 {
-    color: var(--text);
+  color: var(--text);
 }
 
 .top-left-head span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    font-weight: 500;
-    border-radius: 20px;
-    color: black;
-    background-color: var(--btn-type);
-    font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  font-weight: 500;
+  border-radius: 20px;
+  color: black;
+  background-color: var(--btn-type);
+  font-size: 14px;
 }
+
+.top-left-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Air Pollution */
+
+.air-measure {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.5rem 1rem 0 0;
+}
+
+.wind-icon {
+  font-size: 4rem;
+}
+
+.air-value {
+  text-align: center;
+}
+
+.air-value span {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 300;
+}
+.air-value h3 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+/* SunRise & Sunset Time */
 
 .sun-rise_set {
-    background-color: var(--sub-box);
-    border-radius: 10px;
-    padding: 1rem;
-    width: 49%;
+  background-color: var(--sub-box);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 49%;
 }
 
-.top-right-head{
-    color: var(--text);
+.top-right-head {
+  color: var(--text);
 }
 
-.rise-set-time{
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2rem 0 2rem 0;
+.rise-set-time {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.5rem 1rem 0 0;
 }
 
 .time {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .sunrise,
 .sunset {
-    display: flex;
+  display: flex;
 }
 
-.rise-set-logo {
-    font-size: 4.2rem;
+.icon {
+  font-size: 3.8rem;
 }
 
 .sunrise-time,
 .sunset-time {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 .sunrise-time span,
 .sunset-time span {
-    font-size: 12px;
-    color: var(--text);
+  font-size: 12px;
+  color: var(--text);
 }
 .sunrise-time h3,
 .sunset-time h3 {
-    font-size: 2.3rem;
-    font-weight: 300;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
+/* Bottom Box */
+
 .bottom-higlights {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
 
 .humidity,
@@ -124,10 +136,10 @@ h4 {
 .visibility,
 .feels-like,
 .wind {
-    background-color: var(--sub-box);
-    padding: 1rem;
-    border-radius: 10px;
-    width: 19%;
+  background-color: var(--sub-box);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 19%;
 }
 
 .hum-value,
@@ -135,9 +147,9 @@ h4 {
 .visi-value,
 .feels-value,
 .wind-value {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .humidity h5,
@@ -145,27 +157,23 @@ h4 {
 .visibility h5,
 .feels-like h5,
 .wind h5 {
-    color: var(--text);
-    font-size: 16px;
-    font-weight: 400;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.hum-value .logo,
-.pressure-value .logo,
-.visi-value .logo,
-.feels-like .logo,
-.wind .logo {
-    font-size: 3rem;
+.logo {
+  font-size: 3rem;
 }
 .hum-value span,
 .pressure-value span,
 .visi-value span,
 .feels-like span {
-    font-size: 2rem;
-    font-weight: 300;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 .wind span {
-    font-size: 1.6rem;
-    font-weight: 300;
+  font-size: 1.6rem;
+  font-weight: 300;
 }

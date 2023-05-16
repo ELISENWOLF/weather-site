@@ -1,40 +1,40 @@
-.forecast-container{
-    padding: 1rem;
-    border-radius: 10px;
-    background-color: var(--main-box);
+h6 {
+  margin-bottom: 1rem;
 }
 
-h6{
-    margin-bottom: 1rem;
-}
-
-.image-temp {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.image-temp h5 {
-    font-size: 1.5rem;
-    margin-left: 0.5rem;
-    font-weight: 300;
-    color: var(--main-text);
+.forecast-container {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--main-box);
 }
 
 .forecast-days {
-    display: flex;
-    flex-direction: row;
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+}
+
+.image-temp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .image-temp img {
-    width: 2rem;
-    height: 2rem;
-    margin-bottom: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.image-temp h5 {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  font-weight: 300;
+  color: var(--main-text);
 }
 
 .forecast-days span {
-    margin-left: 0.5rem;
-    font-size: 15px;
-    color: var(--sub-text);
+  margin-left: 0.5rem;
+  font-size: 15px;
+  color: var(--sub-text);
 }

@@ -1,41 +1,47 @@
-.today-container {
-    padding: 0.2rem;
-    overflow-x: scroll;
-    overflow-y: hidden;
-}
 h5 {
-    color: var(--main-text);
-    font-size: 22px;
+  color: var(--main-text);
+  font-size: 22px;
+}
+
+.today-container {
+  padding: 0.2rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .top-container,
 .bottom-container {
-    padding: 0.5rem;
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
 }
 
 .all-climate,
 .all-wind {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-    height: fit-content;
-    background-color: var(--sub-box);
-    border-radius: 10px;
-    padding: 1.5rem;
-    text-align: center;
-    margin: 0rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  background-color: var(--sub-box);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  margin: 0rem 0.5rem;
+}
+
+.climate-time,
+.wind-time {
+  font-size: 0.9rem;
 }
 
 .today-temperature,
 .today-wind {
-    width: 70px;
-    height: 70px;
+  width: 70px;
+  height: 70px;
 }
 
 .climate-temp,
 .windspeed {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
