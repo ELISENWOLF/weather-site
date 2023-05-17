@@ -10,7 +10,7 @@ const Forecast = ({ data }) => {
   const forecastDay = WEEK.slice(day, WEEK.length).concat(WEEK.slice(0, day))
 
   return (
-    <div className='main-box'>
+    <div className='forecast-box'>
       <h6>7 Days Forecast</h6>
       <Col xl={11} className='forecast-container'>
         {

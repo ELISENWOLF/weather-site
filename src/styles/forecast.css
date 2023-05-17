@@ -38,3 +38,87 @@ h6 {
   font-size: 15px;
   color: var(--sub-text);
 }
+
+@media only screen and (max-width: 1024px) {
+  h6 {
+    margin-bottom: 1rem;
+  }
+  
+  .forecast-container {
+    padding: 0.7rem;
+  }
+  
+  .forecast-days {
+    margin-top: 0.8rem;
+  }
+  
+  .image-temp img {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .image-temp h5 {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    font-weight: 300;
+    color: var(--main-text);
+  }
+  
+  .forecast-days span {
+    margin-left: 0.5rem;
+    font-size: 15px;
+    color: var(--sub-text);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .forecast-box{
+    width: 22rem;
+    position: relative;
+    bottom: 14.5rem;
+    left: 24rem;
+    height: 13rem;
+  }
+  
+  h6 {
+    margin-bottom: 1rem;
+  }
+  
+  .forecast-container {
+    padding: 0.7rem;
+    height: 11rem;
+    overflow-y: scroll;
+  }
+  
+  .forecast-days {
+    margin-top: 0.8rem;
+  }
+  
+  .image-temp img {
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .image-temp h5 {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    font-weight: 300;
+    color: var(--main-text);
+  }
+  
+  .forecast-days span {
+    margin-left: 0.5rem;
+    font-size: 15px;
+    color: var(--sub-text);
+  }
+}
+
+@media only screen and (max-width: 426px){
+
+}
+
+@media only screen and (max-width: 320px){
+
+}

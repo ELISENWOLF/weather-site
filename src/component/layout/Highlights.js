@@ -167,7 +167,7 @@ const Highlights = ({ data, rise_set }) => {
                 src={direction}
                 style={style}
                 alt='direction-logo'
-                className='logo' />
+                className='image-icon' />
               <span>{data.current.wind_kph}km/h</span>
             </div>
           </Col>

@@ -11,7 +11,7 @@ const TodaysClimate = ({ data }) => {
 
   console.log(forecastHour[0]);
   return (
-    <div className="main-box">
+    <div className="today_at-box">
       <h5>Today at</h5>
       <Container className="today-container">
         <Row className="top-container">
