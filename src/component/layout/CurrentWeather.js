@@ -33,7 +33,7 @@ const CurrentWeather = ({ data, countryCode }) => {
       <Row className='top'>
         <h6>Now</h6>
         <Col className='temperature-box'>
-          <h2 className='temperature'>{data.current.temp_c}<sup>o</sup>C</h2>
+          <h2 className='temperature'>{Math.round(data.current.temp_c)}<sup>o</sup>C</h2>
           <img src={data.current.condition.icon} alt='weather' className='temperature-logo' />
         </Col>
         <h6>{data.current.condition.text.replace("possible", '')}</h6>

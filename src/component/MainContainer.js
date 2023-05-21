@@ -39,7 +39,7 @@ const MainContainer = () => {
     <div className='box'>
       <NavBar onSearchChange={handleOnSearchChange} />
       <div className='sub-container'>
-        <Col xl={3} md={6}>
+        <Col xl={3}>
           {weather && <CurrentWeather data={weather} countryCode={currentweather} />}
           &nbsp;
           {weather && <Forecast data={weather} />}

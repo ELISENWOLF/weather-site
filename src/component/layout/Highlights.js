@@ -121,9 +121,9 @@ const Highlights = ({ data, rise_set }) => {
                     <span>Sunrise</span><h3>{riseHour}:{riseMinute} AM</h3>
                   </div>
                 </Col>
-                <Col className='sunrise'>
+                <Col className='sunset'>
                   <BiMoon className='icon' />
-                  <div className='sunrise-time'>
+                  <div className='sunset-time'>
                     <span>Sunset</span><h3>{hour}:{set_Hour} PM</h3>
                   </div>
                 </Col>

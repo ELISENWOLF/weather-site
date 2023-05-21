@@ -9,6 +9,7 @@
 
 .temperature-box {
   display: flex;
+  justify-content: space-around;
   color: var(--main-text);
 }
 
@@ -43,7 +44,7 @@
 
 @media only screen and (max-width: 1024px) {
   .container-box {
-    width: 100%;
+    width: 125%;
   }
 
   /* Top */
@@ -76,8 +77,8 @@
 }
 @media only screen and (max-width: 768px) {
   .container-box {
-    padding: 0.8rem;
-    width: 100%;
+    padding: 1rem;
+    width: 22rem;
   }
 
   /* Top */
@@ -113,37 +114,35 @@
   .container-box {
     padding: 1.5rem;
     width: 100%;
-    height: 90%;
+    height: fit-content;
   }
 
   /* Top */
 
   .top h6 {
-    font-size: 14px;
+    font-size: 16px;
   }
-  .temperature-box {
-    display: flex;
-    justify-content: space-between;
-  }
+  
   .temperature {
-    font-size: 2.8rem;
+    font-size: 3.9rem;
   }
 
   .temperature-logo {
-    font-size: 3rem;
+    width: 80px;
+    height: 80px;
   }
 
   /* Bottom */
 
   .date-logo,
   .location-logo {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-right: 0.5rem;
   }
 
   .date span,
   .location span {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 @media only screen and (max-width: 320px) {

@@ -40,43 +40,43 @@ h6 {
 }
 
 @media only screen and (max-width: 1024px) {
+  
   h6 {
     margin-bottom: 1rem;
   }
   
   .forecast-container {
+    width: 125%;
     padding: 0.7rem;
   }
   
   .forecast-days {
+    display: flex;
+    justify-content: space-between;
     margin-top: 0.8rem;
   }
   
   .image-temp img {
-    width: 1.8rem;
-    height: 1.8rem;
-    margin-bottom: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
   
   .image-temp h5 {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     margin-left: 0.5rem;
-    font-weight: 300;
-    color: var(--main-text);
   }
   
   .forecast-days span {
-    margin-left: 0.5rem;
-    font-size: 15px;
-    color: var(--sub-text);
+    margin-left: 0.2rem;
+    font-size: 12px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .forecast-box{
-    width: 22rem;
-    position: relative;
-    bottom: 14.5rem;
+    width: 18rem;
+    position: absolute;
+    top: 3.5rem;
     left: 24rem;
     height: 13rem;
   }
@@ -92,6 +92,8 @@ h6 {
   }
   
   .forecast-days {
+    display: flex;
+    justify-content: space-around;
     margin-top: 0.8rem;
   }
   
@@ -116,9 +118,85 @@ h6 {
 }
 
 @media only screen and (max-width: 426px){
-
+  .forecast-box{
+    width: 19.5rem;
+    position: absolute;
+    top: 22rem;
+    left: 1rem;
+    height: fit-content;
+  }
+  
+  h6 {
+    margin-bottom: 1rem;
+  }
+  
+  .forecast-container {
+    padding: 0.2rem;
+    height: fit-content;
+  }
+  
+  .forecast-days {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.8rem;
+  }
+  
+  .image-temp img {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  .image-temp h5 {
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+  }
+  
+  .forecast-days span {
+    margin-left: 0.5rem;
+    font-size: 16px;
+  }
 }
 
-@media only screen and (max-width: 320px){
-
+@media only screen and (max-width: 376px){
+  .forecast-box{
+    width: 17rem;
+    position: absolute;
+    top: 22rem;
+    left: 1rem;
+    height: fit-content;
+  }
+  
+  h6 {
+    margin-bottom: 1rem;
+  }
+  
+  .forecast-container {
+    padding: 0.2rem;
+    height: fit-content;
+  }
+  
+  .forecast-days {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.8rem;
+  }
+  
+  .image-temp img {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 0.1rem;
+  }
+  
+  .image-temp h5 {
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+  }
+  
+  .forecast-days span {
+    margin-left: 0.5rem;
+    font-size: 16px;
+  }
 }
