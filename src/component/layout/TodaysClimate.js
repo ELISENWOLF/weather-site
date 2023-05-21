@@ -7,9 +7,6 @@ const TodaysClimate = ({ data }) => {
 
   const forecastHour = data.forecast.forecastday.slice(0, 1)
   const currentDate = forecastHour[0].date
-
-
-  console.log(forecastHour[0]);
   return (
     <div className="today_at-box">
       <h5>Today at</h5>

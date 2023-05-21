@@ -32,9 +32,6 @@ const MainContainer = () => {
       .catch((err) => console.error(err))
   }
 
-  // console.log(currentweather);
-  console.log(weather);
-
   return (
     <div className='box'>
       <NavBar onSearchChange={handleOnSearchChange} />
@@ -55,3 +52,7 @@ const MainContainer = () => {
 }
 
 export default MainContainer
+
+ // const lat = 28.6;
+  // const lon = 77.2;
+  // const searchCity = 'New Delhi'

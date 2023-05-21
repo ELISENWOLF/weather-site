@@ -20,13 +20,13 @@ const CurrentWeather = ({ data, countryCode }) => {
 
   const time = () => {
     const timeZone = data.location.tz_id;
-    const now = new Date().toLocaleTimeString('en-US', {timeZone: timeZone})
+    const now = new Date().toLocaleTimeString('en-US', { timeZone: timeZone })
     setLiveHour(now)
   }
-  
-    setInterval(() => {
-      time()
-    }, 1000)
+
+  setInterval(() => {
+    time()
+  }, 1000)
 
   return (
     <Col xs={12} md={2} xl={11} className='container-box'>

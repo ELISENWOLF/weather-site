@@ -200,103 +200,102 @@ h4 {
 
   /* Top Box */
 
-.top-highlights {
-  display: flex;
-  justify-content: space-between;
-}
+  .top-highlights {
+    display: flex;
+    justify-content: space-between;
+  }
 
-/* Top Box Head */
+  /* Top Box Head */
 
-.top-left-head h6 {
-  font-size: 14px;
-}
+  .top-left-head h6 {
+    font-size: 14px;
+  }
 
-.top-left-head span {
-  width: 25%;
-  height: 1.3rem;
-  font-weight: 500;
-  font-size: 12px;
-}
+  .top-left-head span {
+    width: 25%;
+    height: 1.3rem;
+    font-weight: 500;
+    font-size: 12px;
+  }
 
-/* Air Pollution */
+  /* Air Pollution */
 
-.wind-icon {
-  font-size: 3rem;
-}
+  .wind-icon {
+    font-size: 3rem;
+  }
 
-.air-value span {
-  font-size: 10px;
-}
-.air-value h3 {
-  font-size: 18px;
-}
+  .air-value span {
+    font-size: 10px;
+  }
+  .air-value h3 {
+    font-size: 18px;
+  }
 
-/* SunRise & Sunset Time */
-.icon {
-  font-size: 3rem;
-}
+  /* SunRise & Sunset Time */
+  .icon {
+    font-size: 3rem;
+  }
 
-.sunrise-time,
-.sunset-time {
-  margin-left: 1rem;
-}
+  .sunrise-time,
+  .sunset-time {
+    margin-left: 1rem;
+  }
 
-.sunrise-time span,
-.sunset-time span {
-  font-size: 12px;
-}
-.sunrise-time h3,
-.sunset-time h3 {
-  font-size: 1.1rem;
-}
+  .sunrise-time span,
+  .sunset-time span {
+    font-size: 12px;
+  }
+  .sunrise-time h3,
+  .sunset-time h3 {
+    font-size: 1.1rem;
+  }
 
-/* Bottom Box */
+  /* Bottom Box */
 
-.bottom-higlights {
-  margin-top: 0.5rem;
-}
+  .bottom-higlights {
+    margin-top: 0.5rem;
+  }
 
-.humidity,
-.pressure,
-.visibility,
-.feels-like,
-.wind {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 10px;
-  width: 19%;
-}
+  .humidity,
+  .pressure,
+  .visibility,
+  .feels-like,
+  .wind {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    width: 19%;
+  }
 
-.humidity h5,
-.pressure h5,
-.visibility h5,
-.feels-like h5,
-.wind h5 {
-  font-size: 14px;
-}
+  .humidity h5,
+  .pressure h5,
+  .visibility h5,
+  .feels-like h5,
+  .wind h5 {
+    font-size: 14px;
+  }
 
-.logo {
-  font-size: 2rem;
-}
+  .logo {
+    font-size: 2rem;
+  }
 
-.image-icon {
-  width: 25px;
-  height: 25px;
-}
+  .image-icon {
+    width: 25px;
+    height: 25px;
+  }
 
-.hum-value span,
-.pressure-value span,
-.visi-value span,
-.feels-like span {
-  font-size: 1.3rem;
-}
+  .hum-value span,
+  .pressure-value span,
+  .visi-value span,
+  .feels-like span {
+    font-size: 1.3rem;
+  }
 
-.wind span {
-  font-size: 1rem;
-}
-
+  .wind span {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -307,7 +306,7 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 426px){
+@media only screen and (max-width: 426px) {
   .highlights {
     width: 24.8rem;
     position: absolute;
@@ -432,12 +431,11 @@ h4 {
   }
 }
 
-@media only screen and (max-width: 376px){
+@media only screen and (max-width: 376px) {
   .highlights {
-    width: 21rem;
+    width: 20.5rem;
     position: absolute;
-    top: 54rem;
-    right: 19.8rem;
+    top: 52rem;
   }
 
   .top-left-head h6 {
@@ -445,20 +443,94 @@ h4 {
   }
 
   .top-left-head span {
-    width: 25%;
     font-size: 11px;
   }
   /* Air Pollution */
 
   .wind-icon {
-    font-size: 3rem;
+    font-size: 2.8rem;
+  }
+
+  .air-value span {
+    font-size: 8px;
+  }
+  .air-value h3 {
+    font-size: 18px;
+  }
+
+  /* SunRise & Sunset Time */
+
+  .top-right-head h6 {
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 2.4rem;
+  }
+
+  .sunrise-time h3,
+  .sunset-time h3 {
+    font-size: 1rem;
+  }
+
+  /* Bottom Box */
+
+  .humidity h5,
+  .pressure h5,
+  .visibility h5,
+  .feels-like h5,
+  .wind h5 {
+    font-size: 12px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .image-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hum-value span,
+  .pressure-value span,
+  .visi-value span,
+  .feels-like span {
+    font-size: 1rem;
+  }
+
+  .wind span {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .highlights {
+    width: 18rem;
+    position: absolute;
+    top: 48rem;
+    right: 19.8rem;
+  }
+
+  .top-left-head h6 {
+    font-size: 10px;
+  }
+
+  .top-left-head span {
+    width: 25%;
+    font-size: 9px;
+  }
+  /* Air Pollution */
+
+  .wind-icon {
+    font-size: 2.5rem;
   }
 
   .air-value span {
     font-size: 9px;
   }
   .air-value h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   /* SunRise & Sunset Time */
@@ -468,20 +540,20 @@ h4 {
   }
 
   .top-right-head h6 {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .icon {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 
   .sunrise-time,
   .sunset-time {
-    margin-left: 0.1rem;
+    margin-left: 0.2rem;
   }
   .sunrise-time h3,
   .sunset-time h3 {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: 300;
   }
 
@@ -523,12 +595,12 @@ h4 {
   .pressure-value span,
   .visi-value span,
   .feels-like span {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 300;
   }
 
   .wind span {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 300;
   }
 }

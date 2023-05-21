@@ -11,3 +11,24 @@
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
 }
+
+@media only screen and (max-width: 768px) {
+  .input-box {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .input-box {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .input-box {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .input-box {
+    width: 60%;
+  }
+}

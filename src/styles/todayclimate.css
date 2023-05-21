@@ -53,33 +53,33 @@ h5 {
     margin-left: 1rem;
     width: 45rem;
   }
-  
+
   h5 {
     font-size: 18px;
   }
 
   .top-container,
   .bottom-container {
-  padding: 0.4rem;
+    padding: 0.4rem;
   }
-  
+
   .all-climate,
   .all-wind {
     padding: 1.2rem;
     margin: 0rem 0.4rem;
   }
-  
+
   .climate-time,
   .wind-time {
     font-size: 0.8rem;
   }
-  
+
   .today-temperature,
   .today-wind {
     width: 65px;
     height: 65px;
   }
-  
+
   .climate-temp,
   .windspeed {
     font-size: 0.8rem;
@@ -92,115 +92,154 @@ h5 {
     bottom: -20rem;
     left: 0rem;
   }
-  
+
   h5 {
     font-size: 18px;
   }
 
   .top-container,
   .bottom-container {
-  padding: 0.4rem;
+    padding: 0.4rem;
   }
-  
+
   .all-climate,
   .all-wind {
     padding: 1.2rem;
     margin: 0rem 0.4rem;
   }
-  
+
   .climate-time,
   .wind-time {
     font-size: 0.8rem;
   }
-  
+
   .today-temperature,
   .today-wind {
     width: 65px;
     height: 65px;
   }
-  
+
   .climate-temp,
   .windspeed {
     font-size: 0.8rem;
   }
 }
 
-@media only screen and (max-width: 426px){
+@media only screen and (max-width: 426px) {
   .today_at-box {
     position: absolute;
     top: 94rem;
     left: 0rem;
     width: 24.8rem;
   }
-  
+
   h5 {
     font-size: 18px;
   }
 
   .top-container,
   .bottom-container {
-  padding: 0.4rem;
+    padding: 0.4rem;
   }
-  
+
   .all-climate,
   .all-wind {
     padding: 1.2rem;
     margin: 0rem 0.4rem;
   }
-  
+
   .climate-time,
   .wind-time {
     font-size: 0.8rem;
   }
-  
+
   .today-temperature,
   .today-wind {
     width: 65px;
     height: 65px;
   }
-  
+
   .climate-temp,
   .windspeed {
     font-size: 0.8rem;
   }
 }
 
-@media only screen and (max-width: 376px){
+@media only screen and (max-width: 376px) {
   .today_at-box {
     position: absolute;
-    top: 90rem;
-    left: 0rem;
-    width: 21rem;
+    top: 88rem;
+    width: 20.4rem;
   }
-  
+
   h5 {
     font-size: 18px;
   }
 
   .top-container,
   .bottom-container {
-  padding: 0.4rem;
+    padding: 0.4rem;
   }
-  
+
   .all-climate,
   .all-wind {
     padding: 1.2rem;
     margin: 0rem 0.4rem;
   }
-  
+
   .climate-time,
   .wind-time {
     font-size: 0.8rem;
   }
-  
+
   .today-temperature,
   .today-wind {
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
   }
-  
+
   .climate-temp,
   .windspeed {
     font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .today_at-box {
+    position: absolute;
+    top: 83rem;
+    left: 0rem;
+    width: 18rem;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  .top-container,
+  .bottom-container {
+    padding: 0.4rem;
+  }
+
+  .all-climate,
+  .all-wind {
+    padding: 1.2rem;
+    margin: 0rem 0.4rem;
+  }
+
+  .climate-time,
+  .wind-time {
+    font-size: 0.8rem;
+  }
+
+  .today-temperature,
+  .today-wind {
+    width: 45px;
+    height: 45px;
+  }
+
+  .climate-temp,
+  .windspeed {
+    font-size: 0.7rem;
   }
 }

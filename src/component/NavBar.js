@@ -35,7 +35,7 @@ const NavBar = ({ onSearchChange }) => {
 
   return (
     <div className='navbar'>
-      <span>logo</span>
+      <span>EW Weather</span>
       <AsyncPaginate
         placeholder='Search for city'
         debounceTimeOut={600}
