@@ -2,17 +2,17 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(33, 36, 40);
-  color: white;
+  background-color: rgb(190, 196, 204);
+  color: rgb(45, 45, 45);
 }
 
 :root {
-  --text: rgba(156, 152, 152, 0.915);
-  --main-text: rgba(255, 255, 255, 0.9);
-  --sub-text: rgba(97, 97, 97, 0.9);
-  --sub-box: rgba(45, 44, 44, 0.915);
-  --main-box: rgba(39, 39, 39, 0.915);
-  --scrollbar-bg: rgba(109, 109, 109, 0.9);
+  --text: rgba(57, 57, 57, 0.915);
+  --main-text: rgba(8, 8, 8, 0.9);
+  --sub-text: rgba(0, 0, 0, 0.9);
+  --sub-box: rgba(157, 157, 157, 0.915);
+  --main-box: rgba(233, 233, 233, 0.915);
+  --scrollbar-bg: rgba(57, 57, 57, 0.9);
 }
 
 ::-webkit-scrollbar {

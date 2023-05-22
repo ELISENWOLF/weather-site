@@ -1,11 +1,19 @@
 .container-box {
-  background: var(--main-box);
+  /* background: var(--main-box); */
+  background-image: url('../assets/images/bg2\ weather.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 1rem;
   border-radius: 10px;
   color: var(--text);
+  box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Top */
+
+.top h6 {
+  font-weight: 600;
+}
 
 .temperature-box {
   display: flex;
@@ -18,7 +26,8 @@
 }
 
 .temperature-logo {
-  font-size: 5.4rem;
+  width: 80px;
+  height: 80px;
   margin-left: 1rem;
 }
 
@@ -34,6 +43,7 @@
   display: flex;
   padding: 0rem 0 0.5rem 0;
   color: var(--sub-text);
+  font-weight: 600;
 }
 
 .date-logo,
