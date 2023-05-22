@@ -1,6 +1,5 @@
 .container-box {
-  /* background: var(--main-box); */
-  background-image: url('../assets/images/bg2\ weather.jpg');
+  background: linear-gradient(250deg, rgba(81, 165, 230, 0.8), rgba(53, 182, 163, 0.826));
   background-size: cover;
   background-repeat: no-repeat;
   padding: 1rem;

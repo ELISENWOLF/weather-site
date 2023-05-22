@@ -1,16 +1,24 @@
 import { Col, Row } from 'react-bootstrap'
 import { HiOutlineCalendar } from 'react-icons/hi';
 import { GoLocation } from 'react-icons/go';
+import { useEffect, useState } from 'react';
 
 import '../../styles/currentweather.css'
-import { useState } from 'react';
+import rain from '../../assets/images/rain.jpg'
+import cloudy from '../../assets/images/cloudy.jpg'
+import snow from '../../assets/images/snow.jpg'
+import sunny from '../../assets/images/sunny.jpg'
+import thunder from '../../assets/images/thunder.jpg'
+import clear from '../../assets/images/clear.jpg'
+import weatherbg from '../../assets/images/currentweather.jpg'
 
 const WEEK = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 const MONTH = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
-const CurrentWeather = ({ data, countryCode }) => {
+const CurrentWeather = ({ data }) => {
 
   const [liveHour, setLiveHour] = useState('')
+  const [bg, setBg] = useState(null)
 
   const date = new Date().getDate()
   const day = new Date().getDay()
@@ -24,19 +32,46 @@ const CurrentWeather = ({ data, countryCode }) => {
     setLiveHour(now)
   }
 
-  setInterval(() => {
-    time()
-  }, 1000)
+  const weather = data.current.condition.text.toLowerCase()
+
+  useEffect(() => {
+    if (weather.includes('rain') === true) {
+      setBg(rain)
+    } else if (weather.includes('thunder') === true) {
+      setBg(thunder)
+    } else if (weather.includes('sunny') === true) {
+      setBg(sunny)
+    } else if (weather.includes('cloudy') === true) {
+      setBg(cloudy)
+    } else if (weather.includes('snow') === true) {
+      setBg(snow)
+    } else if (weather.includes('clear') === true) {
+      setBg(clear)
+    } else {
+      setBg(weatherbg)
+    }
+  }, [weather])
+
+  useEffect(() => {
+    setInterval(() => {
+      time()
+    }, 1000)
+  })
 
   return (
-    <Col xs={12} md={2} xl={11} className='container-box'>
+    <Col
+      xs={12}
+      md={2}
+      xl={11}
+      className='container-box'
+      style={{ backgroundImage: `url(${bg})` }}>
       <Row className='top'>
         <h6>Now</h6>
         <Col className='temperature-box'>
           <h2 className='temperature'>{Math.round(data.current.temp_c)}<sup>o</sup>C</h2>
           <img src={data.current.condition.icon} alt='weather' className='temperature-logo' />
         </Col>
-        <h6>{data.current.condition.text.replace("possible", '')}</h6>
+        <h6>{weather.replace("possible", '')}</h6>
         <hr className='line' />
       </Row>
       <Row className='bottom'>
@@ -48,7 +83,7 @@ const CurrentWeather = ({ data, countryCode }) => {
         </Col>
         <Col className='location'>
           <GoLocation className='location-logo' />
-          <span>{countryCode.name},&nbsp;{countryCode.sys.country}</span>
+          <span>{data.city}</span>
         </Col>
       </Row>
     </Col>

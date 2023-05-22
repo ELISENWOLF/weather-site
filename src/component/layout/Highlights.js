@@ -10,52 +10,9 @@ import { RiTempColdLine } from 'react-icons/ri'
 import direction from '../../assets/images/direction.png'
 import '../../styles/highlight.css'
 
-const Highlights = ({ data, rise_set }) => {
+const Highlights = ({ data }) => {
   const [airCondition, setAirCondition] = useState("")
   const [airBgColor, setAirBgColor] = useState('')
-  const [hour, setHour] = useState('')
-
-  //SunSet & SunRise//
-
-  const timeZone = rise_set.timezone
-  const sun_Rise = rise_set.sys.sunrise
-  const sun_Set = rise_set.sys.sunset
-
-  const riseDetail = new Date((timeZone + sun_Rise) * 1000).toUTCString()
-  const [, , , , riseTime] = riseDetail.split(" ")
-  const [riseHour, riseMinute,] = riseTime.split(":")
-
-  const set_Detail = new Date((timeZone + sun_Set) * 1000).toUTCString()
-  const [, , , , set_Time] = set_Detail.split(" ")
-  const [set_Hour, ,] = set_Time.split(":")
-
-  useEffect(() => {
-    if (set_Hour === '00') {
-      setHour('12')
-    } else if (set_Hour === '13') {
-      setHour('1')
-    } else if (set_Hour === '14') {
-      setHour('2')
-    } else if (set_Hour === '15') {
-      setHour('3')
-    } else if (set_Hour === '16') {
-      setHour('4')
-    } else if (set_Hour === '17') {
-      setHour('5')
-    } else if (set_Hour === '18') {
-      setHour('6')
-    } else if (set_Hour === '19') {
-      setHour('7')
-    } else if (set_Hour === '20') {
-      setHour('8')
-    } else if (set_Hour === '21') {
-      setHour('9')
-    } else if (set_Hour === '22') {
-      setHour('10')
-    } else if (set_Hour === '23') {
-      setHour('11')
-    }
-  }, [set_Hour])
 
   //air_condition//
 
@@ -118,13 +75,13 @@ const Highlights = ({ data, rise_set }) => {
                 <Col className='sunrise'>
                   <BiSun className='icon' />
                   <div className='sunrise-time'>
-                    <span>Sunrise</span><h3>{riseHour}:{riseMinute} AM</h3>
+                    <span>Sunrise</span><h3>{data.forecast.forecastday[0].astro.sunrise}</h3>
                   </div>
                 </Col>
                 <Col className='sunset'>
                   <BiMoon className='icon' />
                   <div className='sunset-time'>
-                    <span>Sunset</span><h3>{hour}:{set_Hour} PM</h3>
+                    <span>Sunset</span><h3>{data.forecast.forecastday[0].astro.sunset}</h3>
                   </div>
                 </Col>
               </Col>

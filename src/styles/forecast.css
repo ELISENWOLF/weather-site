@@ -3,9 +3,11 @@ h6 {
 }
 
 .forecast-container {
+  background-image: url("../assets/images/forecast.jpg");
   padding: 1rem;
   border-radius: 10px;
-  background-color: var(--main-box);
+  background-size: cover;
+  box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.3);
 }
 
 .forecast-days {
@@ -29,13 +31,14 @@ h6 {
 .image-temp h5 {
   font-size: 1.5rem;
   margin-left: 0.5rem;
-  font-weight: 300;
+  font-weight: 600;
   color: var(--main-text);
 }
 
 .forecast-days span {
   margin-left: 0.5rem;
   font-size: 15px;
+  font-weight: 600;
   color: var(--sub-text);
 }
 
@@ -100,7 +103,6 @@ h6 {
   .image-temp h5 {
     font-size: 1.2rem;
     margin-left: 0.5rem;
-    font-weight: 300;
     color: var(--main-text);
   }
 
