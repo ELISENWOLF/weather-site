@@ -1,3 +1,7 @@
+.navbar span {
+  font-weight: 700;
+}
+
 .navbar-right {
   width: 30%;
   display: flex;

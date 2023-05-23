@@ -1,6 +1,6 @@
 .box {
   padding: 0 1rem 0 1rem;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .sub-container {

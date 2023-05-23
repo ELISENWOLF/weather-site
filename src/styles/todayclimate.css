@@ -23,11 +23,21 @@ h5 {
   align-items: center;
   width: fit-content;
   height: fit-content;
-  background-color: var(--sub-box);
   border-radius: 10px;
   padding: 1.5rem;
   text-align: center;
   margin: 0rem 0.5rem;
+  font-weight: 550;
+  background-image: url(../assets/images/dailyHour.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.all-climate:hover,
+.all-wind:hover {
+  transform: scale(1.04);
+  transition: 600ms ease-in-out;
 }
 
 .climate-time,
@@ -89,7 +99,7 @@ h5 {
 @media only screen and (max-width: 768px) {
   .today_at-box {
     position: absolute;
-    bottom: -20rem;
+    bottom: -39.5rem;
     left: 0rem;
   }
 
@@ -207,7 +217,7 @@ h5 {
 @media only screen and (max-width: 320px) {
   .today_at-box {
     position: absolute;
-    top: 83rem;
+    top: 84rem;
     left: 0rem;
     width: 18rem;
   }

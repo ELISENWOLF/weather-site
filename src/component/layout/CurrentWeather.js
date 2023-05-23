@@ -79,7 +79,7 @@ const CurrentWeather = ({ data }) => {
           <HiOutlineCalendar className='date-logo' />
           <span>{Day}&nbsp;{date}, {Month}</span>
           &nbsp;&nbsp;
-          <span>{liveHour}</span>
+          <span className='liveHour'>{liveHour}</span>
         </Col>
         <Col className='location'>
           <GoLocation className='location-logo' />

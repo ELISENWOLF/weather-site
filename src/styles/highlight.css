@@ -1,7 +1,10 @@
 .highlights {
-  background-color: var(--main-box);
+  background-image: url("../assets/images/highlight.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 10px;
   padding: 1rem;
+  box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Common */
@@ -22,9 +25,11 @@ h4 {
 
 .air-details {
   background-color: var(--sub-box);
+  box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 1rem;
   width: 49%;
+  text-shadow: 6px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .top-left-head h6 {
@@ -77,10 +82,12 @@ h4 {
 /* SunRise & Sunset Time */
 
 .sun-rise_set {
+  box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.3);
   background-color: var(--sub-box);
   border-radius: 10px;
   padding: 1rem;
   width: 49%;
+  text-shadow: 6px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .top-right-head {
@@ -140,6 +147,8 @@ h4 {
   padding: 1rem;
   border-radius: 10px;
   width: 19%;
+  box-shadow: 6px 5px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 6px 5px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hum-value,
@@ -163,7 +172,7 @@ h4 {
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 2.6rem;
 }
 
 .image-icon {
@@ -175,7 +184,7 @@ h4 {
 .pressure-value span,
 .visi-value span,
 .feels-like span {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 300;
 }
 
@@ -308,6 +317,9 @@ h4 {
 
 @media only screen and (max-width: 426px) {
   .highlights {
+    background-image: url("../assets/images/highlightsm.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 24.8rem;
     position: absolute;
     top: 54rem;
@@ -433,6 +445,9 @@ h4 {
 
 @media only screen and (max-width: 376px) {
   .highlights {
+    background-image: url("../assets/images/highlightsm.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 20.5rem;
     position: absolute;
     top: 52rem;
@@ -506,9 +521,12 @@ h4 {
 
 @media only screen and (max-width: 320px) {
   .highlights {
+    background-image: url("../assets/images/highlightsm.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 18rem;
     position: absolute;
-    top: 48rem;
+    top: 49rem;
     right: 19.8rem;
   }
 
