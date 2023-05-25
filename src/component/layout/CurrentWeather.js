@@ -28,9 +28,17 @@ const CurrentWeather = ({ data }) => {
 
   const time = () => {
     const timeZone = data.location.tz_id;
-    const now = new Date().toLocaleTimeString('en-US', { timeZone: timeZone })
-    setLiveHour(now)
-  }
+    const now = new Date().toLocaleTimeString('en-US', { timeZone: timeZone });
+    setLiveHour(now);
+  };
+  
+  useEffect(() => {
+    const interval = setInterval(time, 1000);
+  
+    return () => {
+      clearInterval(interval);
+    };
+  });
 
   const weather = data.current.condition.text.toLowerCase()
 
@@ -51,12 +59,6 @@ const CurrentWeather = ({ data }) => {
       setBg(weatherbg)
     }
   }, [weather])
-
-  useEffect(() => {
-    setInterval(() => {
-      time()
-    }, 1000)
-  })
 
   return (
     <Col
