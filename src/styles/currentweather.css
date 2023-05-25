@@ -1,9 +1,4 @@
 .container-box {
-  background: linear-gradient(
-    250deg,
-    rgba(81, 165, 230, 0.8),
-    rgba(53, 182, 163, 0.826)
-  );
   background-size: cover;
   background-repeat: no-repeat;
   padding: 1rem;
@@ -59,158 +54,23 @@
   text-shadow: 5px 4px 2px rgba(0, 0, 0, 0.3);
 }
 
-@media only screen and (max-width: 1024px) {
-  .container-box {
-    width: 125%;
+@media (max-width: 575.98px) {
+  .container-box{
+    width: 100%;
   }
-
-  /* Top */
-
-  .top h6 {
-    font-size: 14px;
-  }
-
-  .temperature {
-    font-size: 2.6rem;
-  }
-
-  .temperature-logo {
-    width: 55px;
-    height: 55px;
-  }
-
-  /* Bottom */
-
-  .date-logo,
-  .location-logo {
-    font-size: 1.2rem;
-    margin-right: 0.5rem;
-  }
-
-  .date span,
-  .location span {
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .container-box {
-    padding: 1rem;
-    width: 22rem;
-  }
-
-  /* Top */
+    /* Top */
 
   .top h6 {
-    font-size: 10px;
+    font-size: 12px;
   }
-  .temperature {
-    font-size: 3.3rem;
-  }
+
   .temperature-box {
     display: flex;
     justify-content: space-between;
-  }
-  .temperature-logo {
-    width: 70px;
-    height: 70px;
-  }
-
-  /* Bottom */
-
-  .date-logo,
-  .location-logo {
-    font-size: 1rem;
-    margin-right: 0.2rem;
-  }
-
-  .date span,
-  .location span {
-    font-size: 12px;
-  }
-}
-@media only screen and (max-width: 426px) {
-  .container-box {
-    padding: 1.5rem;
-    width: 100%;
-    height: fit-content;
-  }
-
-  /* Top */
-
-  .top h6 {
-    font-size: 16px;
-  }
-
-  .temperature {
-    font-size: 3.6rem;
-  }
-
-  .temperature-logo {
-    width: 80px;
-    height: 80px;
-  }
-
-  /* Bottom */
-
-  .date-logo,
-  .location-logo {
-    font-size: 1.3rem;
-  }
-
-  .date span,
-  .location span {
-    font-size: 15px;
-  }
-}
-
-@media only screen and (max-width: 376px) {
-  .container-box {
-    padding: 1.5rem;
-    margin-top: 0.5rem;
-    width: 100%;
-    height: 90%;
-  }
-
-  /* Top */
-
-  .top h6 {
-    font-size: 12px;
-  }
-
-  .temperature-logo {
-    width: 70px;
-    height: 70px;
   }
 
   .temperature {
     font-size: 3.2rem;
-  }
-
-  /* Bottom */
-
-  .date-logo,
-  .location-logo {
-    font-size: 1.2rem;
-  }
-
-  .date span,
-  .location span {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 320px) {
-  /* Top */
-
-  .top h6 {
-    font-size: 12px;
-  }
-  .temperature-box {
-    display: flex;
-    justify-content: space-between;
-  }
-  .temperature {
-    font-size: 3rem;
   }
 
   .temperature-logo {
@@ -222,11 +82,170 @@
 
   .date-logo,
   .location-logo {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .date span,
   .location span {
-    font-size: 12px;
+    font-size: 0.8rem;
   }
+}
+
+@media (min-width: 576px) {
+
+  .container-box {
+    margin-top: 1rem;
+    width: 85%;
+  }
+
+    /* Top */
+
+    .top h6 {
+      font-size: 14px;
+    }
+  
+    .temperature-box {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .temperature {
+      font-size: 2.8rem;
+    }
+  
+    .temperature-logo {
+      width: 50px;
+      height: 50px;
+    }
+  
+    /* Bottom */
+  
+    .date-logo,
+    .location-logo {
+      font-size: 1.1rem;
+    }
+  
+    .date span,
+    .location span {
+      font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 768px) {
+  .container-box {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+    /* Top */
+
+    .top h6 {
+      font-size: 16px;
+    }
+  
+    .temperature-box {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .temperature {
+      font-size: 3.5rem;
+    }
+  
+    .temperature-logo {
+      width: 70px;
+      height: 70px;
+    }
+  
+    /* Bottom */
+  
+    .date-logo,
+    .location-logo {
+      font-size: 1.3rem;
+    }
+  
+    .date span,
+    .location span {
+      font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 992px) {
+  .container-box {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+    /* Top */
+
+    .top h6 {
+      font-size: 16px;
+    }
+  
+    .temperature-box {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .temperature {
+      font-size: 3.5rem;
+    }
+  
+    .temperature-logo {
+      width: 70px;
+      height: 70px;
+    }
+  
+    /* Bottom */
+  
+    .date-logo,
+    .location-logo {
+      font-size: 1.1rem;
+      opacity: 0.7;
+    }
+  
+    .date span,
+    .location span {
+      font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+  .container-box {
+    margin-top: 1rem;
+    width: 120%;
+  }
+
+    /* Top */
+
+    .top h6 {
+      font-size: 18px;
+    }
+  
+    .temperature-box {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .temperature {
+      font-size: 4rem;
+    }
+  
+    .temperature-logo {
+      width: 80px;
+      height: 80px;
+    }
+  
+    /* Bottom */
+  
+    .date-logo,
+    .location-logo {
+      font-size: 1.5rem;
+      opacity: 0.7;
+    }
+  
+    .date span,
+    .location span {
+      font-size: 0.9rem;
+    }
 }

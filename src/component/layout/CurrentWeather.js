@@ -44,7 +44,11 @@ const CurrentWeather = ({ data }) => {
 
   useEffect(() => {
     if (weather.includes('rain') === true) {
-      setBg(rain)
+      if(weather.includes('thunder') === true){
+        setBg(thunder)
+      }else{
+        setBg(rain)
+      }
     } else if (weather.includes('thunder') === true) {
       setBg(thunder)
     } else if (weather.includes('sunny') === true) {
@@ -55,7 +59,7 @@ const CurrentWeather = ({ data }) => {
       setBg(snow)
     } else if (weather.includes('clear') === true) {
       setBg(clear)
-    } else {
+    }else {
       setBg(weatherbg)
     }
   }, [weather])

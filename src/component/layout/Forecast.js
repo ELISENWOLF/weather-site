@@ -21,11 +21,9 @@ const Forecast = ({ data }) => {
                   <img src={item.day.condition.icon} alt='weather-icon' />
                   <h5>{Math.round(item.day.avgtemp_c)}<sup>o</sup></h5>
                 </Col>
-                <Col xl={3}>
-                  <span>{forecastDay[index]}</span>
-                </Col>
-                <Col xl={6}>
-                  <span>{item.day.condition.text.replace("possible", '')}</span>
+                <Col className='desc'>
+                    <span>{forecastDay[index]}</span>
+                    <span>{item.day.condition.text.replace("possible", '')}</span>
                 </Col>
               </div>
             </Row>
