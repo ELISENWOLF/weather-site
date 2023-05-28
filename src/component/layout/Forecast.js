@@ -11,7 +11,7 @@ const Forecast = ({ data }) => {
 
   return (
     <div className='forecast-box'>
-      <h6>7 Days Forecast</h6>
+      <h6>5 Days Forecast</h6>
       <Col xl={11} className='forecast-container'>
         {
           data.forecast.forecastday.slice(1).map((item, index) => (
@@ -22,8 +22,8 @@ const Forecast = ({ data }) => {
                   <h5>{Math.round(item.day.avgtemp_c)}<sup>o</sup></h5>
                 </Col>
                 <Col className='desc'>
-                    <span>{forecastDay[index]}</span>
-                    <span>{item.day.condition.text.replace("possible", '')}</span>
+                  <span>{forecastDay[index]}</span>
+                  <span>{item.day.condition.text.replace("possible", '')}</span>
                 </Col>
               </div>
             </Row>

@@ -46,6 +46,8 @@ const Highlights = ({ data }) => {
     transform: `rotateZ(${data.current.wind_degree}deg)`
   }
 
+  console.log(data.current.air_quality);
+
   return (
     <Container className='highlights'>
       <h4>Today's Highlights</h4>

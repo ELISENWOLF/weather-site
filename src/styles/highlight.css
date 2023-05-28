@@ -199,48 +199,48 @@ h4 {
     top: 20rem;
     right: 0.5rem;
   }
-  
+
   /* Common */
-  
+
   h4 {
     font-size: 18px;
   }
-  
+
   /* Top Box */
-  
+
   .top-highlights {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   /* Top Box Head */
-  
+
   .air-details {
     width: 100%;
   }
-  
+
   .top-left-head h6,
   .top-right-head h6 {
     font-size: 1rem;
   }
-  
+
   .top-left-head span {
     width: 20%;
     font-weight: 500;
     font-size: 12px;
   }
-  
+
   /* Air Pollution */
-  
+
   .wind-icon {
     font-size: 2.5rem;
   }
-  
+
   .air-value {
     text-align: center;
   }
-  
+
   .air-value span {
     font-size: 9px;
     font-weight: 500;
@@ -248,26 +248,26 @@ h4 {
   .air-value h3 {
     font-size: 16px;
   }
-  
+
   /* SunRise & Sunset Time */
-  
+
   .sun-rise_set {
     width: 100%;
   }
-  
+
   .rise-set-time {
     padding: 0rem;
   }
-  
+
   .icon {
     font-size: 2.5rem;
   }
-  
+
   .sunrise-time,
   .sunset-time {
     margin-left: 0.2rem;
   }
-  
+
   .sunrise-time span,
   .sunset-time span {
     font-size: 11px;
@@ -278,16 +278,16 @@ h4 {
     font-size: 1rem;
     font-weight: 400;
   }
-  
+
   /* Bottom Box */
-  
+
   .bottom-higlights {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     justify-content: center;
   }
-  
+
   .humidity,
   .pressure,
   .visibility,
@@ -295,7 +295,7 @@ h4 {
   .wind {
     width: 100%;
   }
-  
+
   .humidity h5,
   .pressure h5,
   .visibility h5,
@@ -303,23 +303,23 @@ h4 {
   .wind h5 {
     font-size: 14px;
   }
-  
+
   .logo {
     font-size: 2rem;
   }
-  
+
   .image-icon {
     width: 30px;
     height: 30px;
   }
-  
+
   .hum-value span,
   .pressure-value span,
   .visi-value span,
   .feels-like span {
     font-size: 1rem;
   }
-  
+
   .wind span {
     font-size: 1rem;
   }
@@ -327,53 +327,53 @@ h4 {
 
 @media (min-width: 576px) {
   .highlights {
-    width: 100%;
+    width: 90%;
     position: relative;
     top: 1rem;
     right: 0rem;
   }
-  
+
   /* Common */
-  
+
   h4 {
     font-size: 18px;
   }
-  
+
   /* Top Box */
-  
+
   .top-highlights {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   /* Top Box Head */
-  
+
   .air-details {
     width: 100%;
   }
-  
+
   .top-left-head h6,
   .top-right-head h6 {
     font-size: 1rem;
   }
-  
+
   .top-left-head span {
     width: 20%;
     font-weight: 500;
     font-size: 12px;
   }
-  
+
   /* Air Pollution */
-  
+
   .wind-icon {
     font-size: 2.5rem;
   }
-  
+
   .air-value {
     text-align: center;
   }
-  
+
   .air-value span {
     font-size: 9px;
     font-weight: 500;
@@ -381,26 +381,26 @@ h4 {
   .air-value h3 {
     font-size: 16px;
   }
-  
+
   /* SunRise & Sunset Time */
-  
+
   .sun-rise_set {
     width: 100%;
   }
-  
+
   .rise-set-time {
     padding: 0rem;
   }
-  
+
   .icon {
     font-size: 2.5rem;
   }
-  
+
   .sunrise-time,
   .sunset-time {
     margin-left: 0.2rem;
   }
-  
+
   .sunrise-time span,
   .sunset-time span {
     font-size: 11px;
@@ -411,16 +411,16 @@ h4 {
     font-size: 1rem;
     font-weight: 400;
   }
-  
+
   /* Bottom Box */
-  
+
   .bottom-higlights {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
     justify-content: center;
   }
-  
+
   .humidity,
   .pressure,
   .visibility,
@@ -428,7 +428,7 @@ h4 {
   .wind {
     width: 100%;
   }
-  
+
   .humidity h5,
   .pressure h5,
   .visibility h5,
@@ -436,23 +436,23 @@ h4 {
   .wind h5 {
     font-size: 14px;
   }
-  
+
   .logo {
     font-size: 2rem;
   }
-  
+
   .image-icon {
     width: 30px;
     height: 30px;
   }
-  
+
   .hum-value span,
   .pressure-value span,
   .visi-value span,
   .feels-like span {
     font-size: 1rem;
   }
-  
+
   .wind span {
     font-size: 1rem;
   }
@@ -460,12 +460,12 @@ h4 {
 
 @media (min-width: 768px) {
   .highlights {
-    width: 64%;
+    width: 60%;
     position: relative;
     top: 1rem;
     right: 7rem;
   }
-  
+
   /* Common */
 
   h4 {
@@ -515,7 +515,7 @@ h4 {
   }
 
   .rise-set-time {
-    padding: 1.5rem 1rem 0 0;
+    padding: 1rem 1rem 0 0;
   }
 
   .icon {
@@ -534,7 +534,7 @@ h4 {
   }
   .sunrise-time h3,
   .sunset-time h3 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 400;
   }
 
@@ -588,50 +588,67 @@ h4 {
   .highlights {
     width: 70%;
   }
-  
+
   /* Common */
 
   h4 {
     font-size: 22px;
   }
 
+  .top-highlights {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .air-details {
+    width: 49%;
+  }
+
   /* Top Box Head */
 
   .top-left-head h6,
   .top-right-head h6 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .top-left-head span {
     width: 25%;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   /* Air Pollution */
 
   .wind-icon {
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
 
   .air-value span {
-    font-size: 16px;
+    font-size: 12px;
   }
   .air-value h3 {
-    font-size: 35px;
+    font-size: 19px;
   }
 
   /* SunRise & Sunset Time */
 
+  .sun-rise_set {
+    width: 49%;
+  }
+
+  .rise-set-time {
+    padding: 0;
+  }
+
   .icon {
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
   .sunrise-time span,
   .sunset-time span {
-    font-size: 18px;
+    font-size: 12px;
   }
   .sunrise-time h3,
   .sunset-time h3 {
-    font-size: 2.6rem;
+    font-size: 19px;
     font-weight: 300;
   }
 
@@ -639,8 +656,16 @@ h4 {
 
   .bottom-higlights {
     width: fit-content;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .humidity,
+  .pressure,
+  .visibility,
+  .feels-like,
+  .wind {
+    width: 19%;
   }
 
   .humidity h5,
@@ -648,87 +673,133 @@ h4 {
   .visibility h5,
   .feels-like h5,
   .wind h5 {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .logo {
-    font-size: 3.6rem;
+    font-size: 2rem;
   }
 
   .image-icon {
-    width: 60px;
-    height: 60px;
+    width: 35px;
+    height: 35px;
   }
 
   .hum-value span,
   .pressure-value span,
   .visi-value span,
   .feels-like span {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
   .wind span {
-    font-size: 1.7rem;
+    font-size: 1.1rem;
   }
 }
 
 @media (min-width: 1200px) {
   .highlights {
-    width: 70%;
+    width: 90%;
+    position: relative;
+    left: 3rem;
   }
-  
+
   /* Common */
 
   h4 {
     font-size: 22px;
   }
 
+  /* Top Box */
+
+  .top-highlights {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
   /* Top Box Head */
 
-  .top-left-head h6,
-  .top-right-head h6 {
-    font-size: 20px;
+  .air-details {
+    padding: 1rem;
+    width: 49%;
   }
 
   .top-left-head span {
-    width: 25%;
-    font-size: 20px;
+    height: fit-content;
+    padding: 0rem 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
   }
 
   /* Air Pollution */
 
+  .air-measure {
+    padding: 1rem 1rem 0 0;
+  }
+
   .wind-icon {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 
   .air-value span {
-    font-size: 16px;
+    font-size: 12px;
+    font-weight: 500;
   }
+
   .air-value h3 {
-    font-size: 35px;
+    font-size: 25px;
+    font-weight: 200;
   }
 
   /* SunRise & Sunset Time */
 
-  .icon {
-    font-size: 4.5rem;
+  .sun-rise_set {
+    padding: 1rem;
+    width: 49%;
   }
+
+  .rise-set-time {
+    padding: 1rem 1rem 0 0;
+  }
+
+  .icon {
+    font-size: 3.5rem;
+  }
+
+  .sunrise-time,
+  .sunset-time {
+    margin-left: 0.3rem;
+  }
+
   .sunrise-time span,
   .sunset-time span {
-    font-size: 18px;
+    font-size: 12px;
   }
+
   .sunrise-time h3,
   .sunset-time h3 {
-    font-size: 2.6rem;
+    font-size: 1.4rem;
     font-weight: 300;
   }
 
   /* Bottom Box */
 
   .bottom-higlights {
-    width: fit-content;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .humidity,
+  .pressure,
+  .visibility,
+  .feels-like,
+  .wind {
+    padding: 1rem;
+    width: 19%;
   }
 
   .humidity h5,
@@ -736,26 +807,26 @@ h4 {
   .visibility h5,
   .feels-like h5,
   .wind h5 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .logo {
-    font-size: 3.6rem;
+    font-size: 2.6rem;
   }
 
   .image-icon {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
   }
 
   .hum-value span,
   .pressure-value span,
   .visi-value span,
   .feels-like span {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .wind span {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
   }
 }

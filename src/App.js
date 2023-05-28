@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import './App.css';
 import MainContainer from './component/MainContainer';
+import './App.css';
 
 function App() {
   return (

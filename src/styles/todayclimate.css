@@ -3,11 +3,15 @@ h5 {
   font-size: 22px;
 }
 
+.today_at-box {
+  width: 100%;
+  position: absolute;
+  left: 0rem;
+}
+
 .today-container {
-  padding: 0.2rem;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  opacity: 0.8;
+  width: 100%;
+  overflow-y: scroll;
 }
 
 .top-container,
@@ -25,9 +29,9 @@ h5 {
   width: fit-content;
   height: fit-content;
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 0.4rem;
   text-align: center;
-  margin: 0rem 0.5rem;
+  margin: 0 0.5rem;
   font-weight: 550;
   background-image: url(../assets/images/dailyHour.jpeg);
   background-size: cover;
@@ -54,35 +58,120 @@ h5 {
 
 .climate-temp,
 .windspeed {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 @media (max-width: 575.98px) {
-  .today_at-box{
-    display: none;
+  .today_at-box {
+    position: absolute;
+    top: 82rem;
+    left: 0rem;
+    width: 100%;
+  }
+
+  .today-container {
+    position: relative;
+    width: 100%;
   }
 }
 
 @media (min-width: 576px) {
-  .today_at-box{
-    display: none;
+  .today_at-box {
+    position: absolute;
+    left: 0rem;
+    width: 100%;
+  }
+
+  .today-container {
+    position: relative;
+    width: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  .today_at-box{
-    display: none;
+  .today_at-box {
+    position: absolute;
+    top: 46rem;
+    left: 1rem;
+    width: 100%;
+  }
+
+  .today-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .climate-time,
+  .wind-time {
+    font-size: 0.7rem;
+  }
+
+  .today-temperature,
+  .today-wind {
+    width: 64px;
+    height: 64px;
+  }
+
+  .climate-temp,
+  .windspeed {
+    font-size: 0.7rem;
   }
 }
 
 @media (min-width: 992px) {
-  .today_at-box{
-    display: none;
+  .today_at-box {
+    position: absolute;
+    top: 23.5rem;
+    left: 18rem;
+    width: 70%;
+  }
+
+  .today-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .climate-time,
+  .wind-time {
+    font-size: 0.7rem;
+  }
+
+  .today-temperature,
+  .today-wind {
+    width: 64px;
+    height: 64px;
+  }
+
+  .climate-temp,
+  .windspeed {
+    font-size: 0.7rem;
   }
 }
 
 @media (min-width: 1200px) {
-  .today_at-box{
-    display: none;
+  .today_at-box {
+    position: relative;
+    top: 0rem;
+    left: 3rem;
+    width: 90%;
+  }
+
+  .today-container {
+    width: 100%;
+  }
+  .climate-time,
+  .wind-time {
+    font-size: 0.9rem;
+  }
+
+  .today-temperature,
+  .today-wind {
+    width: 66px;
+    height: 66px;
+  }
+
+  .climate-temp,
+  .windspeed {
+    font-size: 0.8rem;
   }
 }

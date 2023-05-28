@@ -18,7 +18,7 @@ const MainContainer = () => {
   const handleOnSearchChange = (searchData) => {
     const [searchCity,] = searchData.label.split(',')
 
-    const weatherfetch = fetch(`${WEATHER_API_URL}/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${searchCity}&days=8&aqi=yes&alerts=no`);
+    const weatherfetch = fetch(`${WEATHER_API_URL}/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${searchCity}&days=6&aqi=yes&alerts=no`);
 
     Promise.all([weatherfetch])
       .then(async (res) => {
@@ -37,7 +37,7 @@ const MainContainer = () => {
 
       const searchCity = 'New Delhi'
 
-      const loc_weatherfetch = fetch(`${WEATHER_API_URL}/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${searchCity}&days=8&aqi=yes&alerts=no`);
+      const loc_weatherfetch = fetch(`${WEATHER_API_URL}/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${searchCity}&days=6&aqi=yes&alerts=no`);
 
       Promise.all([loc_weatherfetch])
         .then(async (res) => {
@@ -74,7 +74,7 @@ const MainContainer = () => {
                 &nbsp;
                 {loc_Weather && <Forecast data={loc_Weather} />}
               </Col>
-              <Col xl={9} md={12}>
+              <Col xl={12} md={12}>
                 {loc_Weather && <Highlights data={loc_Weather} />}
                 &nbsp;
                 {loc_Weather && <TodaysClimate data={loc_Weather} />}

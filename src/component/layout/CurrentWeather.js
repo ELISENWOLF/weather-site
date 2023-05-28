@@ -31,10 +31,10 @@ const CurrentWeather = ({ data }) => {
     const now = new Date().toLocaleTimeString('en-US', { timeZone: timeZone });
     setLiveHour(now);
   };
-  
+
   useEffect(() => {
     const interval = setInterval(time, 1000);
-  
+
     return () => {
       clearInterval(interval);
     };
@@ -44,9 +44,9 @@ const CurrentWeather = ({ data }) => {
 
   useEffect(() => {
     if (weather.includes('rain') === true) {
-      if(weather.includes('thunder') === true){
+      if (weather.includes('thunder') === true) {
         setBg(thunder)
-      }else{
+      } else {
         setBg(rain)
       }
     } else if (weather.includes('thunder') === true) {
@@ -59,7 +59,7 @@ const CurrentWeather = ({ data }) => {
       setBg(snow)
     } else if (weather.includes('clear') === true) {
       setBg(clear)
-    }else {
+    } else {
       setBg(weatherbg)
     }
   }, [weather])

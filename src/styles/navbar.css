@@ -16,23 +16,37 @@
   border-radius: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 575.98px) {
+  .navbar span {
+    font-size: 14px;
+  }
+
   .input-box {
     width: 60%;
+    font-size: 12px;
   }
 }
-@media only screen and (max-width: 426px) {
+
+@media (min-width: 576px) {
   .input-box {
-    width: 60%;
+    width: 50%;
   }
 }
-@media only screen and (max-width: 376px) {
+
+@media (min-width: 768px) {
   .input-box {
-    width: 70%;
+    width: 50%;
   }
 }
-@media only screen and (max-width: 320px) {
+
+@media (min-width: 992px) {
   .input-box {
-    width: 60%;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .input-box {
+    width: 50%;
   }
 }

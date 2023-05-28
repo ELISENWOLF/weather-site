@@ -8,7 +8,7 @@ const TodaysClimate = ({ data }) => {
   const forecastHour = data.forecast.forecastday.slice(0, 1)
   const currentDate = forecastHour[0].date
   return (
-    <div className="today_at-box">
+    <Container className="today_at-box">
       <h5>Today at</h5>
       <Container className="today-container">
         <Row className="top-container">
@@ -34,7 +34,7 @@ const TodaysClimate = ({ data }) => {
           }
         </Row>
       </Container>
-    </div>
+    </Container>
   )
 }
 
