@@ -61,10 +61,10 @@ h5 {
   font-size: 0.7rem;
 }
 
-@media (max-width: 575.98px) {
+@media  (max-width: 575.98px) {
   .today_at-box {
     position: absolute;
-    top: 82rem;
+    top: 86rem;
     left: 0rem;
     width: 100%;
   }

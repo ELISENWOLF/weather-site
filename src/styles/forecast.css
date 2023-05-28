@@ -47,9 +47,9 @@ h6 {
     width: 95%;
     border-radius: 10px;
     position: absolute;
-    top: 60rem;
+    top: 61rem;
     left: 0.5rem;
-    height: 50%;
+    height: fit-content;
   }
 
   .forecast-container {
@@ -148,8 +148,8 @@ h6 {
   }
 
   .image-temp img {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .image-temp h5 {
