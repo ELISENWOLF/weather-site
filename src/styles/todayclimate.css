@@ -90,14 +90,14 @@ h5 {
 
 @media (min-width: 768px) {
   .today_at-box {
-    position: absolute;
-    top: 46rem;
-    left: 1rem;
+    position: relative;
+    top: 1rem;
+    left: -17rem;
     width: 100%;
   }
 
   .today-container {
-    position: relative;
+    position: absolute;
     width: 100%;
   }
 
@@ -120,14 +120,14 @@ h5 {
 
 @media (min-width: 992px) {
   .today_at-box {
-    position: absolute;
-    top: 23.5rem;
-    left: 18rem;
+    position: relative;
+    top: 0rem;
+    left: -8rem;
     width: 70%;
   }
 
   .today-container {
-    position: relative;
+    position: absolute;
     width: 100%;
   }
 
@@ -152,11 +152,13 @@ h5 {
   .today_at-box {
     position: relative;
     top: 0rem;
-    left: 3rem;
-    width: 90%;
+    left: -8.5rem;
+    width: 69%;
   }
 
   .today-container {
+    position: absolute;
+    left: 0rem;
     width: 100%;
   }
   .climate-time,
@@ -166,8 +168,8 @@ h5 {
 
   .today-temperature,
   .today-wind {
-    width: 66px;
-    height: 66px;
+    width: 70px;
+    height: 70px;
   }
 
   .climate-temp,

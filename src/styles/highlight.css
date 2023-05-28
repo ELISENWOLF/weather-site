@@ -699,9 +699,9 @@ h4 {
 
 @media (min-width: 1200px) {
   .highlights {
-    width: 90%;
+    width: 68%;
     position: relative;
-    left: 3rem;
+    left: -8rem;
   }
 
   /* Common */
